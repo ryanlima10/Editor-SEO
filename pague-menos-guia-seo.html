@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Nomenclatura e Descritivo SEO · Pague Menos</title>
+<meta name="description" content="Guia visual e interativo de nomenclatura e descritivo SEO dos produtos Pague Menos por categoria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#002575;--blue-mid:#0044C0;--blue-light:#E8EFFE;--blue-xlight:#F2F5FF;
+  --red:#E63329;--red-light:#FFF0EF;
+  --white:#FFFFFF;
+  --gray-50:#F8FAFC;--gray-100:#F1F5F9;--gray-200:#E2E8F0;
+  --gray-300:#CBD5E1;--gray-400:#94A3B8;--gray-500:#64748B;
+  --gray-700:#334155;--gray-900:#0F172A;
+  --verde-bg:#D9F2DE;--verde-fg:#145A1F;
+  --rosa-bg:#FFE0EF;--rosa-fg:#8B1044;
+  --bege-bg:#FFF1D4;--bege-fg:#7A4500;
+  --azul-bg:#D6EEFF;--azul-fg:#0A3E82;
+  --lilas-bg:#EDE0FF;--lilas-fg:#4D1A8A;
+  --salmao-bg:#FFE2DA;--salmao-fg:#8F1F10;
+  --radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:20px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.05);
+  --shadow-md:0 4px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.05);
+  --shadow-lg:0 12px 36px rgba(0,0,0,.13),0 4px 12px rgba(0,0,0,.07);
+  --font:'Plus Jakarta Sans',-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ─── HEADER ─── */
+.header{position:sticky;top:0;z-index:100;background:var(--blue);border-bottom:3px solid var(--red)}
+.header-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:20px;height:68px}
+  .logo{display:flex;align-items:center;gap:12px;flex-shrink:0;text-decoration:none;position:relative}
+  .logo-img{width: 120px;px;object-fit:cover;flex-shrink:0}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .logo-txt{display:flex;flex-direction:column}
+  .logo-txt .t1{font-size:13px;font-weight:800;color:#fff;letter-spacing:1.5px;text-transform:uppercase}
+  .logo-txt .t2{font-size:10px;font-weight:400;color:rgba(255,255,255,.6);letter-spacing:.3px}
+.h-sep{width:1px;height:32px;background:rgba(255,255,255,.2);flex-shrink:0}
+.h-titles{flex:1;min-width:0}
+.h-titles h1{font-size:14px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.h-titles p{font-size:11px;color:rgba(255,255,255,.6);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.h-pill{flex-shrink:0;background:var(--red);color:#fff;padding:5px 14px;border-radius:999px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+
+/* ─── HERO ─── */
+.hero{background:linear-gradient(135deg,#002575 0%,#0A3AAD 60%,#1050C0 100%);padding:52px 28px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.06) 1px,transparent 0);background-size:32px 32px}
+.hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1;display:flex;align-items:center;gap:52px}
+.hero-content{flex:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:20px}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0}
+.hero-content h2{font-size:36px;font-weight:900;color:#fff;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px}
+.hero-content h2 span{color:#91C8FF}
+.hero-content p{font-size:16px;color:rgba(255,255,255,.75);max-width:520px;line-height:1.75}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px}
+.hero-chip .n{background:var(--red);color:#fff;width:18px;height:18px;border-radius:50%;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.hero-widget{flex-shrink:0;width:360px}
+.hw-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-xl);overflow:hidden}
+.hw-head{background:rgba(255,255,255,.1);padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+.hw-icon{font-size:22px;width:38px;height:38px;background:rgba(255,255,255,.15);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.hw-ht .hl{font-size:12px;font-weight:700;color:#fff}
+.hw-ht .sl{font-size:10px;color:rgba(255,255,255,.6)}
+.hw-body{padding:16px 18px}
+.hw-lbl{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.hw-steps{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}
+.hw-step{padding:5px 12px;border-radius:5px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.hw-example{background:rgba(255,255,255,.08);border-radius:8px;padding:10px 12px;font-size:12px;font-weight:600;color:rgba(255,255,255,.9);border-left:3px solid rgba(255,255,255,.3)}
+
+/* ─── SECTION HEADER ─── */
+.sec-head{max-width:1280px;margin:0 auto;padding:44px 28px 20px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.sec-head h2{font-size:22px;font-weight:800;color:var(--gray-900)}
+.sec-head p{font-size:14px;color:var(--gray-500);margin-top:4px}
+.sec-count{background:var(--blue-light);color:var(--blue);padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;flex-shrink:0}
+
+/* ─── CATEGORY GRID ─── */
+.cat-grid{max-width:1280px;margin:0 auto;padding:0 28px 44px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+
+/* ─── CATEGORY CARD ─── */
+.cat-card{border-radius:var(--radius-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,border-color .15s;border:2px solid transparent;position:relative}
+.cat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.cat-card:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.cat-card.active{border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,37,117,.12),var(--shadow-md)}
+.cc-check{position:absolute;top:8px;right:8px;width:24px;height:24px;background:var(--blue);color:#fff;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:11px;font-weight:800;z-index:2;box-shadow:0 2px 8px rgba(0,37,117,.3)}
+.cat-card.active .cc-check{display:flex}
+.cc-img{height:104px;display:flex;align-items:center;justify-content:center;font-size:44px;position:relative;overflow:hidden}
+.cc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.16) 100%)}
+.cc-body{padding:14px 16px 16px}
+.cc-body h3{font-size:13px;font-weight:800;color:var(--gray-900);margin-bottom:4px;line-height:1.3}
+.cc-body p{font-size:11.5px;color:var(--gray-500);line-height:1.5}
+.cc-badge{display:inline-flex;margin-top:10px;padding:3px 9px;border-radius:999px;font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px}
+
+/* ─── DETAIL ─── */
+.detail-wrap{display:none;background:var(--gray-50);border-top:1px solid var(--gray-200)}
+.detail-wrap.visible{display:block;animation:fadeDown .3s ease}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+.detail-inner{max-width:1280px;margin:0 auto;padding:40px 28px 52px}
+.detail-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:32px;flex-wrap:wrap}
+.detail-crumb{font-size:11px;color:var(--gray-400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.detail-title{font-size:26px;font-weight:900;color:var(--gray-900);line-height:1.2}
+.detail-desc{font-size:14px;color:var(--gray-500);margin-top:6px}
+.btn-close{padding:9px 16px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-sm);cursor:pointer;font-family:var(--font);font-size:12px;font-weight:700;color:var(--gray-700);display:flex;align-items:center;gap:6px;transition:all .15s;flex-shrink:0;box-shadow:var(--shadow-sm)}
+.btn-close:hover{background:var(--gray-100)}
+
+/* ─── BLOCKS ─── */
+.block{background:#fff;border-radius:var(--radius-xl);border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);padding:28px;margin-bottom:20px}
+.block-header{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.block-header.space-bw{justify-content:space-between;flex-wrap:wrap;gap:16px}
+.block-bar{width:4px;height:18px;border-radius:2px;flex-shrink:0}
+.block-header h3{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px}
+
+/* ─── SUB TABS ─── */
+.sub-tabs{display:flex;gap:4px;margin-bottom:20px;flex-wrap:wrap}
+.sub-tab{padding:7px 14px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;border:1.5px solid var(--gray-200);background:#fff;color:var(--gray-500);transition:all .15s;font-family:var(--font)}
+.sub-tab.active-tab{background:var(--blue-light);color:var(--blue);border-color:var(--blue)}
+.sub-panel{display:none}
+.sub-panel.active-panel{display:block}
+
+/* ─── STEP ARROWS ─── */
+.steps-row{display:flex;flex-wrap:wrap;gap:2px;align-items:center;margin-bottom:18px}
+.st{display:inline-flex;align-items:center;padding:9px 26px 9px 20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;white-space:nowrap;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,0 100%,12px 50%);margin-bottom:3px;line-height:1.3}
+.st:first-child{clip-path:polygon(0 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,0 100%);padding-left:16px}
+.st.verde{background:var(--verde-bg);color:var(--verde-fg)}
+.st.rosa{background:var(--rosa-bg);color:var(--rosa-fg)}
+.st.bege{background:var(--bege-bg);color:var(--bege-fg)}
+.st.azul{background:var(--azul-bg);color:var(--azul-fg)}
+.st.lilas{background:var(--lilas-bg);color:var(--lilas-fg)}
+.st.salmao{background:var(--salmao-bg);color:var(--salmao-fg)}
+
+/* ─── LEGEND ─── */
+.legend{display:flex;flex-wrap:wrap;gap:12px;padding-top:16px;border-top:1px solid var(--gray-100)}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--gray-500)}
+.leg-dot{width:11px;height:11px;border-radius:3px;flex-shrink:0;border:1px solid rgba(0,0,0,.07)}
+
+/* ─── EXAMPLES ─── */
+.examples-sec{margin-top:20px}
+.ex-label{font-size:11px;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.ex-label::before{content:'';display:block;width:14px;height:2px;background:var(--gray-300);border-radius:1px}
+.ex-item{display:flex;align-items:flex-start;gap:8px;padding:9px 0;border-bottom:1px solid var(--gray-100);font-size:13px;font-weight:600;color:var(--blue);line-height:1.4}
+.ex-item:last-child{border-bottom:none}
+.ex-item::before{content:'→';color:var(--gray-400);font-weight:400;flex-shrink:0;margin-top:1px}
+
+/* ─── PREVIEW CARDS ─── */
+.preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:20px}
+.pcard{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:16px}
+.pcard-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:10px}
+.pcard-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--gray-500);margin-bottom:6px}
+.pcard-content{font-size:12.5px;color:var(--gray-700);line-height:1.6}
+
+/* ─── COVERS ─── */
+.covers-row{padding-top:16px;border-top:1px solid var(--gray-100)}
+.covers-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--gray-400);margin-bottom:8px}
+.covers-tags{display:flex;flex-wrap:wrap;gap:6px}
+.covers-tag{padding:3px 10px;border-radius:999px;background:var(--blue-light);color:var(--blue);font-size:11px;font-weight:700}
+
+/* ─── COPY BUTTON ─── */
+.btn-copy{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);cursor:pointer;font-family:var(--font);font-size:13px;font-weight:800;transition:all .15s;letter-spacing:.3px;white-space:nowrap}
+.btn-copy:hover{background:#001D5C;transform:translateY(-1px)}
+.btn-copy:active{transform:translateY(0)}
+.btn-copy.done{background:#1B5E20}
+.btn-copy svg{width:15px;height:15px;flex-shrink:0}
+
+/* ─── TOAST ─── */
+.toast{position:fixed;bottom:28px;right:28px;background:#1B5E20;color:#fff;padding:14px 22px;border-radius:var(--radius-md);font-size:14px;font-weight:700;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:10px;z-index:9999;opacity:0;transform:translateY(20px);transition:all .25s ease;pointer-events:none}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast-ic{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:13px}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){.hero-widget{display:none}.hero-content h2{font-size:28px}}
+@media(max-width:640px){
+  .header-inner{padding:0 16px;gap:12px}
+  .h-titles p,.h-pill{display:none}
+  .hero{padding:36px 16px}
+  .hero-content h2{font-size:22px}
+  .sec-head,.cat-grid,.detail-inner{padding-left:16px;padding-right:16px}
+  .cat-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cc-img{height:80px;font-size:34px}
+  .block{padding:20px 16px}
+  .st{font-size:9.5px;padding:7px 20px 7px 15px}
+  .preview-grid{grid-template-columns:1fr}
+  .detail-top{flex-direction:column}
+  .detail-title{font-size:21px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" role="banner">
+  <div class="header-inner">
+    <a href="#" class="logo" aria-label="Pague Menos - início">
+      <img src="img-logo/logo-formato-vertical.png" alt="Pague Menos" class="logo-img">
+      <span class="sr-only">Pague Menos - Sua Saúde em Primeiro Lugar</span>
+    </a>
+    <div class="h-sep" aria-hidden="true"></div>
+    <div class="h-titles">
+      <h1>Guia de Nomenclatura e Descritivo SEO</h1>
+      <p>Padrões por categoria para criação de nomes e descrições de produtos</p>
+    </div>
+   
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow" aria-hidden="true">Guia Interno · Time de Conteúdo</div>
+      <h2 id="hero-heading">Nomenclatura <span>correta</span>,<br>descrições que convertem.</h2>
+      <p>Selecione uma categoria para visualizar o padrão de nomenclatura e o roteiro SEO correspondente. Copie o script com um clique.</p>
+      <div class="hero-chips" aria-label="Resumo do guia">
+        <div class="hero-chip"><span class="n">14</span> Categorias</div>
+        <div class="hero-chip"><span class="n">10</span> Scripts SEO</div>
+        <div class="hero-chip"><span class="n">6</span> Tipos de Etapas</div>
+      </div>
+    </div>
+    <div class="hero-widget" aria-hidden="true">
+      <div class="hw-card">
+        <div class="hw-head">
+          <div class="hw-icon">💊</div>
+          <div class="hw-ht"><div class="hl">Medicamentos Gerais</div><div class="sl">Exemplo de nomenclatura</div></div>
+        </div>
+        <div class="hw-body">
+          <div class="hw-lbl">Estrutura</div>
+          <div class="hw-steps">
+            <div class="hw-step" style="background:var(--verde-bg);color:var(--verde-fg)">Nome</div>
+            <div class="hw-step" style="background:var(--bege-bg);color:var(--bege-fg)">Dosagem</div>
+            <div class="hw-step" style="background:var(--salmao-bg);color:var(--salmao-fg)">Qtd</div>
+            <div class="hw-step" style="background:var(--azul-bg);color:var(--azul-fg)">Tipo</div>
+          </div>
+          <div class="hw-lbl" style="margin-top:12px">Exemplo</div>
+          <div class="hw-example">Sany D 50000ui 8 Cápsulas Moles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRID -->
+<div class="sec-head">
+  <div>
+    <h2>Categorias de Produtos</h2>
+    <p>Clique em um card para ver o padrão de nomenclatura e o script SEO correspondente</p>
+  </div>
+  <div class="sec-count">14 categorias</div>
+</div>
+<div class="cat-grid" id="catGrid" role="list" aria-label="Categorias de produtos"></div>
+
+<!-- DETAIL -->
+<section class="detail-wrap" id="detailWrap" aria-live="polite" aria-label="Detalhes da categoria selecionada">
+  <div class="detail-inner" id="detailInner"></div>
+</section>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <div class="toast-ic">✓</div>
+  <span>Script copiado com sucesso!</span>
+</div>
+
+<script>
+/* ================================================================
+   SCRIPTS — verbatim, sem alteração
+   ================================================================ */
+const SCRIPTS = {};
+
+SCRIPTS.MEDICAMENTO = `Com base nas informações presentes acima: Você é um especialista em SEO e precisa fazer textos de descrição de produtos para um e-commerce de farmácia, traga primeiro o texto completo e abaixo em código HTML. As descrições precisam ser de fácil entendimento: 
+<h2>O que é [nome do produto e dosagem]?</h2> 
+- deve ter pelo menos 3 linhas e citar para o que é o medicamento
+- <p><strong>Conteúdo da embalagem:</strong> [conteúdo da embalagem]</p> 
+- em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+- <p><strong>Indicação etária:</strong>[indicação etária de uso, ex: Uso adulta e pediátrico acima de 6 anos</p>
+<h2>Composição [Primeiro nome do produto e dosagem]: </h2> 
+- <p><strong>Princípio ativo:</strong> [ativo principal (linkar para a página, ex:<a href=https://www.paguemenos.com.br/nimesulida>nimesulida</a>]  e [dosagem] </p> 
+- <p><strong>Excipientes:</strong> [excipientes]</p>
+<h2>Para que serve [nome do produto]?</h2> 
+- texto claro, quando necessário, utilizar bullet points
+<h2>Como devo usar(ou tomar- dependendo do tipo de medicamento)[Primeiro nome do produto e dosagem]?</h2> 
+- quando viável em bullet points 
+<h2>Quando não devo tomar(ou usar- dependendo do tipo de medicamento) [nome do produto]?</h2> 
+
+Ao longo do texto descritivo devem haver:
+linkagem para a categoria do produto em questão, ex: protetor solar, linkar para a categoria https://www.paguemenos.com.br/dermocosmeticos/protecao-solar, estes devem possuir regra para serem linkados em sinônimos como: protetor solar facial, protetor solar para o rosto, protetores solares, etc.
+linkar para a marca do medicamento quando não for genérico, ex: a marca é Wegovy, linkar <a href=https://www.paguemenos.com.br/wegovy>Wegovy</a>
+negrito nas partes do conteúdo que respondam a pergunta abordada
+negrito no nome do produto e suas variações
+negrito características que destacam o produto (aplicação, benefícios, indicação, princípio ativo, indicação de uso infantil, etc)
+As informações abaixo não devem estar em código html:
+ - Trazer 10 palavras chave que correspondam o medicamento (como: o nome do medicamento, utilização do medicamento, substância ativa ou reações e doenças que o medicamento possa auxiliar) 
+- Meta tag com no máximo 155 caracteres citando a utilidade do medicamento e CTA, se sobrarem caracteres, inserir Pague Menos. Faça para o medicamento [INSERIR NOME COMPLETO DO PRODUTO: COM PRINCÍPIO ATIVO, DOSAGEM, QUANTIDADE E LABORATÓRIO\\MARCA]`;
+
+SCRIPTS.APARELHOS = `Com base nas informações presentes acima: Você é um especialista em SEO e precisa fazer textos de descrição de produtos para um e-commerce de farmácia, traga primeiro o texto completo e abaixo em código HTML. As descrições precisam ser de fácil entendimento:
+<h2>O que é [o/a] [primeiro nome do produto]?</h2>
+ - deve ter pelo menos 3 linhas e citar para o que é o medicamento 
+- <p><strong>Conteúdo da embalagem:</strong> [conteúdo da embalagem]</p> 
+ - em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+<h2>Para quem é indicado [o/a] [primeiro nome do produto]?</h2> 
+- retirar <h2>Para quem é indicado [nome do produto]?</h2> caso não haja necessidade da informação 
+<h2>Para que serve [o/a] [nome do produto]?</h2> 
+- deve ter primeiro a frase:<p> O/A <strong>[nome do produto]</strong> serve para: 
+- sempre em bullet points 
+<h2>Como devo usar [o/a] [primeiro nome do produto]?</h2> 
+- quando viável em bullet points <h2>Como funciona [o/a] [nome do produto]?</h2> 
+<h2>Cuidados importantes [o/a] [primeiro nome do produto]:</h2> 
+- retirar <h2>Cuidados importantes [nome do produto]:</h2> caso não haja necessidade da informação
+<h2>Quanto tempo dura [o/a] [primeiro nome do produto]?</h2> 
+- retirar <h2>Quanto tempo dura [o/a] [nome do produto]?</h2> caso não haja necessidade da informação 
+<h2>Contraindicações:</h2> 
+- retirar <h2>Contraindicações:</h2> caso não haja necessidade da informação 
+- em bullet points 
+Ao longo do texto descritivo devem haver:
+linkagem para a categoria do produto em questão, ex: protetor solar, linkar para a categoria https://www.paguemenos.com.br/dermocosmeticos/protecao-solar, estes devem possuir regra para serem linkados em sinônimos como: protetor solar facial, protetor solar para o rosto, protetores solares, etc.
+negrito nas partes do conteúdo que respondam a pergunta abordada
+negrito no nome do produto e suas variações
+negrito características que destacam o produto (aplicação, benefícios, indicação, ativo, etc)
+
+As informações abaixo não devem estar em código html: 
+- Trazer 10 palavras chave que correspondam o medicamento (como: o nome do medicamento, utilização do medicamento, substância ativa ou reações e doenças que o medicamento possa auxiliar) - Meta tag com no máximo 155 caracteres citando a utilidade do medicamento. Faça para `;
+
+SCRIPTS.NAO_ALIMENTOS = `Com base nas informações presentes acima: Você é um especialista em SEO e precisa fazer textos de descrição de produtos para um e-commerce de farmácia, traga em código HTML. As descrições precisam ser de fácil entendimento:
+<h2>O que é [o/a] [primeiro nome do produto]?</h2>
+ - deve ter pelo menos 3 linhas e citar para o que é o medicamento 
+- <p><strong>Conteúdo da embalagem:</strong> [conteúdo da embalagem]</p> 
+ - em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+<h2>Para que serve [o/a] [nome do produto]?</h2> 
+- deve ter primeiro a frase:<p> O/A <strong>[nome do produto]</strong> serve para: 
+- sempre em bullet points 
+<h2>Como devo usar [o/a] [primeiro nome do produto]?</h2> 
+- quando viável em bullet points <h2>Como funciona [o/a] [nome do produto]?</h2> 
+<h2>Advertências:</h2> 
+- retirar <h2>Contraindicações:</h2> caso não haja necessidade da informação 
+- em bullet points 
+Ao longo do texto descritivo devem haver:
+negrito nas partes do conteúdo que respondam a pergunta abordada
+negrito no nome do produto e suas variações
+negrito características que destacam o produto (aplicação, benefícios, indicação, ativo, etc)
+
+As informações abaixo não devem estar em código html: 
+- Trazer 10 palavras chave que correspondam o medicamento (como: o nome do medicamento, utilização do medicamento, substância ativa ou reações e doenças que o medicamento possa auxiliar) - Meta tag com no máximo 155 caracteres citando a utilidade do medicamento. Faça para `;
+
+SCRIPTS.DERMO_COSMETICOS = `Você é um especialista em SEO e precisa fazer textos de descrição de produtos para um e-commerce de farmácia, traga primeiro o texto completo e abaixo em código HTML. As descrições precisam ser de fácil entendimento e devem conter os seguintes subtítulos:
+<h2>O que é [o/a] [nome do produto]?</h2>
+-deve ter no mínimo 3 linhas
+-citar sua classificação na primeira frase 
+- <p><strong>Ideal para:</strong> ex: Peles secas se for com cor, citar a cor da pele também</p>
+- <p><strong>Conteúdo da embalagem:</strong> [conteúdo da embalagem]</p>
+ - em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+-exemplo: "o creme facial x é um hidratante"
+<h2>Composição [o/a] [primeiro nome do produto + característica]:</h2>
+- ativos diferenciados devem estar em um parágrafo.Ex: <p><strong>Phe-Resorcinol:</strong> Atua na redução de manchas escuras, uniformizando o tom da pele</p>
+<h2>Para que serve [o/a] [primeiro nome do produto + característica]?</h2>
+-não utilizar bullet points
+<h2>Benefícios [do/da/de] [nome do produto]:</h2>
+-sempre em bullet points
+<h2>Como devo usar[o/a] [tipo de produto e marca]?</h2>
+- não utilizar bullet points
+<h2>Como funciona [nome do produto]?</h2>
+- explicar como os ativos funcionam, o que diferencia o produto
+<h2>Quando não devo usar [primeiro nome do produto]:</h2>
+- em bullet points
+Ao longo do texto descritivo devem haver:
+linkagem para a categoria do produto em questão, ex: protetor solar, linkar para a categoria https://www.paguemenos.com.br/dermocosmeticos/protecao-solar, estes devem possuir regra para serem linkados em sinônimos como: protetor solar facial, protetor solar para o rosto, protetores solares, etc.
+negrito nas partes do conteúdo que respondam a pergunta abordada
+negrito no nome do produto e suas variações
+negrito características que destacam o produto (aplicação, benefícios, indicação, ativo, etc)
+
+As informações abaixo não devem estar em código html:
+- Trazer 6 palavras chave que correspondam o produto e sejam estratégicas para SEO, como:
+ o nome do produto
+produto com a marca
+classificação do produto
+função ou para que o produto é indicado
+- Meta tag COM NO MÁXIMO 155 caracteres com o nome do produto completo, citando a utilidade e quantidade do produto. Não deve conter hashtags.
+Faça para o PRODUTO`;
+
+SCRIPTS.DERMO_BELEZA_MAMAES = `Script indicado para :
+
+Dermo e Beleza
+Rosto
+Proteção Solar
+Corpo
+Cabelos
+
+Mamães e Bebês
+
+Proteção Solar
+
+ Você é um especialista em SEO e precisa fazer textos de descrição de produtos para um e-commerce de farmácia, traga em código HTML. As descrições precisam ser de fácil entendimento e devem conter os seguintes subtítulos: 
+<h2>O que é [o/a] [nome do produto sem quantidade]?</h2> 
+-deve ter no mínimo 3 linhas 
+-citar sua classificação na primeira frase 
+- <p><strong>Ideal para:</strong> ex: Peles secas se o produto for com cor, citar a cor da pele também</p> 
+- <p><strong>Conteúdo da embalagem:</strong> [conteúdo da embalagem]</p> 
+- em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+-exemplo: "o creme facial x é um hidratante" 
+<h2>Composição [o/a] [primeiro nome do produto + característica ex: Cicaplast Baume B5+]:</h2>
+- ativos diferenciados devem estar em um parágrafo.Ex: <p><strong>Phe-Resorcinol:</strong> Atua na redução de manchas escuras, uniformizando o tom da pele</p> 
+<h2>Para que serve [o/a] [primeiro nome/linha do produto + característica]?</h2> 
+-não utilizar bullet points 
+<h2>Benefícios [do/da/de] [nome do produto]:</h2> 
+-sempre em bullet points 
+<h2>Como devo usar[o/a] [tipo de produto e marca, ex: creme reparador La Roche-Posay]?</h2> 
+- não utilizar bullet points 
+<h2>Como funciona [primeiro nome do produto + Marca - ex: Cicaplast La Roche-Posay]?</h2> 
+- explicar como os ativos funcionam, o que diferencia o produto 
+<h2>Quando não devo usar [primeiro nome do produto]:</h2> 
+- em bullet points Ao longo do texto descritivo devem haver: linkagem para a categoria do produto em questão, ex: protetor solar, linkar para a categoria https://www.paguemenos.com.br/dermocosmeticos/protecao-solar, estes devem possuir regra para serem linkados em sinônimos como: protetor solar facial, protetor solar para o rosto, protetores solares, etc. negrito nas partes do conteúdo que respondam a pergunta abordada negrito no nome do produto e suas variações negrito características que destacam o produto (aplicação, benefícios, indicação, ativo, etc) 
+As informações abaixo não devem estar em código html: 
+- Trazer 6 palavras chave que correspondam o produto e sejam estratégicas para SEO, como: o nome do produto produto com a marca classificação do produto função ou para que o produto é indicado 
+- Meta tag COM NO MÁXIMO 155 caracteres com o nome do produto completo, citando a utilidade e quantidade do produto. Não deve conter hashtags. Faça para o PRODUTO`;
+
+SCRIPTS.DERMO_BELEZA_HIGIENE = `Script indicado para :
+
+Dermo e Beleza
+Unhas
+Perfurmes e Colônias
+Maquiagem
+Coloração
+
+Higiene 
+todo departamento
+
+Mamães e Bebês
+Fraldas
+Banho
+Pós banho
+Higiene
+Higiene Bucal
+Acessórios
+Troca de Fralda
+
+ Você é um especialista em SEO e precisa fazer textos de descrição de produtos para um e-commerce de farmácia, traga em código HTML. As descrições precisam ser de fácil entendimento e devem conter os seguintes subtítulos: 
+<h2>O que é [o/a] [nome do produto sem quantidade, se for fralda citar tamanho]?</h2> 
+-deve ter no mínimo 3 linhas 
+-citar sua classificação na primeira frase 
+- <p><strong>Ideal para:</strong> ex: Peles secas se o produto for com cor, citar a cor da pele também</p> - <p><strong>Conteúdo da embalagem:</strong> [conteúdo da embalagem]</p> 
+- em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. -exemplo: "o creme facial x é um hidratante" 
+<h2>Composição [o/a] [nome do produto, se for fralda, citar tamanho]:</h2>
+- ativos diferenciados devem estar em um parágrafo.Ex: <p><strong>Phe-Resorcinol:</strong> Atua na redução de manchas escuras, uniformizando o tom da pele</p> 
+<h2>Para que serve [o/a] [primeiro nome/linha do produto + característica]?</h2> 
+-não utilizar bullet points 
+<h2>Como devo usar[o/a] [tipo de produto e marca, ex: creme reparador La Roche-Posay]?</h2> 
+- não utilizar bullet points 
+<h2>Quando não devo usar [primeiro nome do produto]:</h2> 
+- em bullet points 
+
+Ao longo do texto descritivo devem haver:negrito nas partes do conteúdo que respondam a pergunta abordada negrito no nome do produto e suas variações negrito características que destacam o produto (aplicação, benefícios, indicação, ativo, etc) 
+
+As informações abaixo não devem estar em código html: 
+- Trazer 10 palavras chave que correspondam o produto e sejam estratégicas para SEO, como: o nome do produto produto com a marca classificação do produto função ou para que o produto é indicado 
+- Meta tag COM NO MÁXIMO 155 caracteres com o nome do produto completo, citando a utilidade e quantidade do produto. Não deve conter hashtags. Faça para o PRODUTO`;
+
+SCRIPTS.HIGIENE_BELEZA_MAMAES = `Script indicado para :
+
+Higiene e Beleza
+- Todas Categorias
+
+Mamães e Bebês
+- Banho
+- Repelentes
+- Troca de Fralda
+- Higiene Bucal
+- Fraldas
+
+Você é um especialista em SEO e precisa fazer textos de descrição de produtos para um e-commerce de farmácia, traga primeiro o texto completo e abaixo em código HTML.As descrições precisam ser de fácil entendimento, possuir variações do nome do produto ao longo do texto, porém os H2 devem ser iguais e devem conter os seguintes subtítulos:
+<h2>O que é [nome do produto]?</h2>
+-deve ter no mínimo 3 linhas
+- quando o produto for fralda adicionar: <p><strong>Indicado para:</strong> bebês com x a x kg</p>  
+- <p><strong>Conteúdo da embalagem:</strong> [exemplo: 400ml de sabonete líquido]</p>
+ - em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+-exemplo: "o creme facial x é um hidratante da marca y "
+<h2>Composição [do/da] [nome do produto]:</h2>
+- ativos diferenciados devem estar em um parágrafo.Ex: <p><strong>Phe-Resorcinol:</strong> Atua na redução de manchas escuras, uniformizando o tom da pele</p>
+<h2>Para que serve [o/a] [nome do produto]?</h2>
+-não utilizar bullet points
+<h2>Benefícios [do/da] [nome do produto]:</h2>
+-sempre em bullet points
+<h2>Como usar [o/a] [nome do produto]?</h2>
+- não utilizar bullet points
+<h2>Advertências:</h2>
+- em bullet points
+Ao longo do texto descritivo devem haver:
+linkagem para a categoria do produto em questão, ex: protetor solar, linkar para a categoria https://www.paguemenos.com.br/dermocosmeticos/protecao-solar, estes devem possuir regra para serem linkados em sinônimos como: protetor solar facial, protetor solar para o rosto, protetores solares, etc.
+negrito nas partes do conteúdo que respondam a pergunta abordada
+negrito no nome do produto e suas variações
+negrito características que destacam o produto (aplicação, benefícios, indicação, ativo, etc)
+
+As informações abaixo não devem estar em código html:
+- Trazer 6 palavras chave que correspondam o produto e sejam estratégicas para SEO, como:
+ o nome do produto
+produto com a marca
+classificação do produto
+função ou para que o produto é indicado
+- Meta tag COM NO MÁXIMO 155 caracteres com o nome do produto completo, citando a utilidade e quantidade do produto. Não deve conter hashtags. Adicionar CTA para Pague Menos caso sobrem caracteres.
+
+Faça para o PRODUTO`;
+
+SCRIPTS.MAMAES_SUPLEMENTOS = `Script indicado para :
+
+Mamães e Bebês
+Suplementos infantis
+Complementos infantis
+Fórmulas infantis
+
+Fitness e Nutrição:
+Suplementos alimentares
+Complementos alimentares
+Whey Protein
+Bebidas prontas
+Snacks saudáveis
+
+Você é um especialista em SEO e precisa fazer textos de descrição de páginas de produtos suplementos e complementos alimentares para um e-commerce de farmácia, o nome do produto deve ser estruturado conforme a maneira de busca dos usuários. Traga em código HTML. As descrições precisam ser de fácil entendimento e devem conter os seguintes subtítulos:
+ <h2>O que é [nome do produto com característica, sem quantidade]?</h2>
+-deve ter no mínimo 3 linhas
+-citar sua classificação na primeira frase 
+<p><strong>Indicado para:</strong> ex: crianças a partir de x anos a x anos, primeira infância</p>
+- <p><strong>Sabor:</strong>[sabor do produto]</strong> (quando aplicável)
+ - <p><strong>Conteúdo da embalagem:</strong> [exemplo: 800g de suplemento alimentar</p>
+ - em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+<h2>Composição [nome do produto com característica, sem quantidade]:<h/2>
+-<p>O [nome do produto] contém: 
+-<p><strong>Ingredientes:</strong>[citar ingredientes]</p> 
+- <p><strong>Informações nutricionais:</strong> [citar calorias, proteína, carboidratos, açúcares e gorduras]</p> 
+<h2>Para que é indicado [primeiro nome do produto + marca]?</h2>
+-não utilizar bullet points
+<h2>Benefícios [primeiro nome do produto + característica/linha]:</h2>
+-sempre em bullet points
+<h2>Como preparar [nome do produto]?</h2> 
+- bullet points
+- seção indicada para produtos infantis, caso não faça sentido para o produto, retire a seção "Como preparar" da descrição
+<h2>Como funciona [primeiro nome do produto]?</h2>
+<h2>Advertências:</h2>
+- em bullet points
+As informações abaixo não devem estar em código html:
+-Trazer 6 palavras chave que correspondam o produto e sejam estratégicas para SEO, como:
+ o nome do produto
+produto com a marca
+classificação do produto
+função ou para que o produto é indicado
+Ao longo do texto descritivo devem haver:
+- as linkagens devem ser para páginas do site de Pague Menos 
+negrito nas partes do conteúdo que respondam a pergunta abordada
+negrito no nome do produto e suas variações
+negrito características que destacam o produto (aplicação, benefícios, indicação, ativo, etc)
+
+- Meta tag COM NO MÁXIMO 155 caracteres com o nome do produto, citando a utilidade do produto. Não deve conter hashtags.
+Faça para PRODUTO`;
+
+SCRIPTS.ALIMENTOS = `Com base nas informações acima: Você é um especialista em SEO e precisa fazer textos de descrição de páginas de alimentos para um e-commerce de farmácia, o nome do produto deve ser estruturado conforme a maneira de busca dos usuários. Traga primeiro o texto completo e abaixo em código HTML. As descrições precisam ser de fácil entendimento e devem conter os seguintes subtítulos:
+ <h2>O que é [nome do produto]?</h2>
+- deve ter no mínimo 3 linhas
+- em um parágrafo único "Sabor", exemplo  <p><strong>Sabor:</strong>Twix Original</p> 
+- em um parágrafo único <p><strong>Conteúdo da embalagem:</strong> [conteúdo da embalagem]</p>
+ - em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+<h2>Ingredientes [nome do produto]:<h/2>
+- deve citar os ingredientes
+- quando relevante citar em um parágrafo separado: calorias, gramas de proteína, quantidade de açúcares, carboidratos e gorduras
+<h2>Advertências:</h2>
+- em bullet points
+- além de advertências e cuidados gerais de consumo, citar alergias 
+
+As informações abaixo não devem estar em código html:
+ -Trazer 6 palavras chave que correspondam o produto e sejam estratégicas para SEO, como:
+ o nome do produto
+produto com a marca
+classificação do produto
+função ou para que o produto é indicado
+ - Meta tag COM NO MÁXIMO 155 caracteres com o nome do produto, citando a utilidade do produto. Não deve conter hashtags.
+
+Faça para [nome do produto, característica grama e marca]`;
+
+SCRIPTS.KIT = `Você é um especialista em SEO e precisa fazer textos de descrição de produtos para kits em um e-commerce de farmácia, traga primeiro o texto completo e abaixo em código HTML. As descrições precisam ser de fácil entendimento e devem conter os seguintes subtítulos:
+<h2>O que é [o/a] [Nome do produto]?</h2>
+-deve ter no mínimo 3 linhas
+- <p><strong>Ideal para:</strong> Peles secas</p> 
+- em um único parágrafo <p><strong>Fabricado por:</strong>. Linkar para a página da marca, quando disponível, ex: Fabricado por: CeraVe, linkar para <a href=https://www.paguemenos.com.br/cerave>, sem utilizar " no código HTML e não adicionar a tag blank. Deve linkar sempre para o site de Pague Menos. 
+-exemplo: "o creme facial x é um hidratante da marca y "
+<h2>Produtos do [nome do poduto]</h2>:
+citar cada um dos produtos com uma breve explicação, no máximo três linhas em parágrafos diferentes. Ex: <p><strong>nome completo do produto</strong>: breve descrição</p>
+<h2>Para que serve [o/a] [nome do produto]?</h2>
+-não utilizar bullet points
+<h2>Benefícios [o/a] [nome do produto]:</h2>
+-sempre em bullet points
+<h2>Como devo usar [o/a] [nome do produto]?</h2>
+- não utilizar bullet points
+<h2>Advertências:</h2>
+- em bullet points
+
+As informações abaixo não devem estar em código html:
+- Trazer 6 palavras chave que correspondam o produto e sejam estratégicas para SEO, como:
+ o nome do produto
+produto com a marca
+classificação do produto
+função ou para que o produto é indicado
+- Meta tag COM NO MÁXIMO 155 caracteres com o nome do produto completo, citando a utilidade e quantidade do produto. Não deve conter hashtags.
+
+Faça para o [nome do kit] que tem os produtos [citar todos os produtos]`;
+
+/* ================================================================
+   CATEGORIES DATA
+   ================================================================ */
+const categories = [
+  {
+    id:'medicamentos-gerais',
+    name:'Medicamentos Gerais',
+    desc:'Medicamentos com ou sem prescrição médica',
+    icon:'💊',
+    bg:'linear-gradient(135deg,#002575 0%,#1565C0 100%)',
+    badge:'MEDICAMENTO',badgeColor:'#1565C0',badgeBg:'#E3F2FD',
+    scriptKey:'MEDICAMENTO',
+    covers:['Medicamentos Gerais','Med. c/ Frascos/Aplicadores','Genéricos','Genérico c/ Combinação','Genérico c/ Vários P.A.'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Nome do Medicamento',c:'verde'},
+        {l:'Dosagem',c:'bege'},
+        {l:'Quantidade',c:'salmao'},
+        {l:'Tipo de Comprimido/Cápsula',c:'azul'}
+      ],
+      examples:['Sany D 50000ui 8 Cápsulas Moles']
+    }],
+    preview:{
+      estrutura:'O que é? → Composição → Para que serve? → Como tomar/usar? → Quando não tomar/usar?',
+      keywords:'10 palavras-chave: nome do produto, utilização, substância ativa, doenças ou reações relacionadas',
+      linkagem:'Categoria do produto + página da marca (quando não genérico) no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Utilidade + CTA · Incluir "Pague Menos" se sobrarem caracteres'
+    }
+  },
+  {
+    id:'medicamentos-frascos',
+    name:'Medicamentos com Frascos/Aplicadores',
+    desc:'Soluções, suspensões e medicamentos com sistema de aplicação',
+    icon:'🧪',
+    bg:'linear-gradient(135deg,#002575 0%,#0D47A1 100%)',
+    badge:'MEDICAMENTO',badgeColor:'#1565C0',badgeBg:'#E3F2FD',
+    scriptKey:'MEDICAMENTO',
+    covers:['Medicamentos com Frascos/Aplicadores'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Nome do Medicamento',c:'verde'},
+        {l:'Dosagem',c:'bege'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'}
+      ],
+      examples:['Victoza 6mg/ml Injetável Com 2 Sistemas de Aplicação']
+    }],
+    preview:{
+      estrutura:'O que é? → Composição → Para que serve? → Como tomar/usar? → Quando não tomar/usar?',
+      keywords:'10 palavras-chave: nome, utilização, substância ativa, doenças ou reações relacionadas',
+      linkagem:'Categoria do produto + página da marca (quando não genérico) no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Utilidade do medicamento + CTA'
+    }
+  },
+  {
+    id:'genericos',
+    name:'Genéricos',
+    desc:'Medicamentos genéricos com princípio ativo e laboratório',
+    icon:'🔬',
+    bg:'linear-gradient(135deg,#004494 0%,#2979FF 100%)',
+    badge:'MEDICAMENTO',badgeColor:'#1565C0',badgeBg:'#E3F2FD',
+    scriptKey:'MEDICAMENTO',
+    covers:['Genéricos'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Princípio Ativo',c:'verde'},
+        {l:'Dosagem',c:'bege'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'},
+        {l:'Tipo de Comprimido/Cápsula',c:'azul'},
+        {l:'Laboratório',c:'rosa'}
+      ],
+      examples:['Pantoprazol 40mg Liberação Retardada 28 Comprimidos Revestidos Genérico EMS']
+    }],
+    preview:{
+      estrutura:'O que é? → Composição → Para que serve? → Como tomar/usar? → Quando não tomar/usar?',
+      keywords:'10 palavras-chave: princípio ativo, utilização, indicações, doenças relacionadas',
+      linkagem:'Categoria do produto no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Nome com princípio ativo, dosagem, qtd e laboratório + CTA'
+    }
+  },
+  {
+    id:'generico-combinacao',
+    name:'Genérico com Combinação',
+    desc:'Genéricos com combinação de forma farmacêutica e aplicador',
+    icon:'⚗️',
+    bg:'linear-gradient(135deg,#003580 0%,#1E88E5 100%)',
+    badge:'MEDICAMENTO',badgeColor:'#1565C0',badgeBg:'#E3F2FD',
+    scriptKey:'MEDICAMENTO',
+    covers:['Genérico com Combinação'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Princípio Ativo',c:'verde'},
+        {l:'Dosagem',c:'bege'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'},
+        {l:'Combinação',c:'lilas'},
+        {l:'Laboratório',c:'rosa'}
+      ],
+      examples:['Nistatina 100.000UI Creme Vaginal 60g Com 14 Aplicadores Genérico Neo Química']
+    }],
+    preview:{
+      estrutura:'O que é? → Composição → Para que serve? → Como tomar/usar? → Quando não tomar/usar?',
+      keywords:'10 palavras-chave: princípio ativo, utilização, indicações, condições tratadas',
+      linkagem:'Categoria do produto no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Nome completo do produto + CTA'
+    }
+  },
+  {
+    id:'generico-varios-ativos',
+    name:'Genérico com Vários Princípios Ativos',
+    desc:'Genéricos com múltiplos princípios ativos na composição',
+    icon:'🧬',
+    bg:'linear-gradient(135deg,#004494 0%,#42A5F5 100%)',
+    badge:'MEDICAMENTO',badgeColor:'#1565C0',badgeBg:'#E3F2FD',
+    scriptKey:'MEDICAMENTO',
+    covers:['Genérico com Vários Princípios Ativos'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Princípio Ativo e Dosagem',c:'verde'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'},
+        {l:'Laboratório',c:'rosa'}
+      ],
+      examples:['Cetoconazol 20mg + Dipropionato de Betametasona 0,64mg + Sulfato de Neomicina 2,5mg Pomada 30g Genérico Pharlab']
+    }],
+    preview:{
+      estrutura:'O que é? → Composição → Para que serve? → Como tomar/usar? → Quando não tomar/usar?',
+      keywords:'10 palavras-chave: cada princípio ativo, utilização combinada, doenças tratadas',
+      linkagem:'Categoria do produto no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Nome com todos os princípios ativos, dosagens e laboratório + CTA'
+    }
+  },
+  {
+    id:'aparelhos-saude',
+    name:'Aparelhos de Saúde e Acessórios Hospitalares',
+    desc:'Equipamentos e acessórios para monitoramento e cuidados de saúde',
+    icon:'🩺',
+    bg:'linear-gradient(135deg,#01579B 0%,#0288D1 100%)',
+    badge:'APARELHOS',badgeColor:'#01579B',badgeBg:'#E1F5FE',
+    scriptKey:'APARELHOS',
+    covers:['Aparelhos de Saúde','Acessórios Hospitalares','Equipamentos Médicos'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Tipo de Produto',c:'verde'},
+        {l:'Marca',c:'rosa'},
+        {l:'Linha/Funcionalidade',c:'bege'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'}
+      ],
+      examples:[
+        'Monitor de Pressão Arterial Omron HEM-7156 Digital de Pulso 1 Unidade',
+        'Termômetro Digital G-Tech THFLEX Axilar Flexível 1 Unidade'
+      ]
+    }],
+    preview:{
+      estrutura:'O que é? → Para quem é indicado? → Para que serve? → Como usar? → Como funciona? → Cuidados importantes → Quanto tempo dura? → Contraindicações',
+      keywords:'10 palavras-chave: nome do produto, utilização, funcionalidade, condições monitoradas',
+      linkagem:'Categoria do produto no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Utilidade do produto'
+    }
+  },
+  // {
+  //   id:'dermocosmeticos',
+  //   name:'Dermocosméticos',
+  //   desc:'Produtos dermocosmético para cuidados corporais e proteção solar',
+  //   icon:'🧴',
+  //   bg:'linear-gradient(135deg,#6A1B9A 0%,#AB47BC 100%)',
+  //   badge:'DERMO',badgeColor:'#6A1B9A',badgeBg:'#F3E5F5',
+  //   scriptKey:'DERMO_COSMETICOS',
+  //   covers:['Dermocosméticos - Corpo','Dermocosméticos - Proteção Solar','Mamães e Bebês - Dermo'],
+  //   nomenclatures:[
+  //     {
+  //       title:'Cuidados com o Corpo',
+  //       steps:[
+  //         {l:'Tipo de Produto',c:'verde'},
+  //         {l:'Funcionalidade',c:'bege'},
+  //         {l:'Marca',c:'rosa'},
+  //         {l:'Linha',c:'bege'},
+  //         {l:'Classificação',c:'lilas'},
+  //         {l:'Quantidade',c:'salmao'}
+  //       ],
+  //       examples:[
+  //         'Sabonete Líquido Dermotivin Salix Pele Mista a Oleosa 300ml',
+  //         'Hidratante Corporal Intensivo Epidrat Peles Secas 450g',
+  //         'Loção para Pernas e Pés Fletop 200ml'
+  //       ]
+  //     },
+  //     {
+  //       title:'Proteção Solar',
+  //       steps:[
+  //         {l:'Tipo de Produto',c:'verde'},
+  //         {l:'Marca',c:'rosa'},
+  //         {l:'Classificação',c:'lilas'},
+  //         {l:'Linha',c:'bege'},
+  //         {l:'Cor',c:'azul'},
+  //         {l:'Proteção',c:'azul'},
+  //         {l:'Quantidade',c:'salmao'}
+  //       ],
+  //       examples:[
+  //         'Protetor Solar Facial La Roche-Posay Anthelius UV Mune 400 FPS60 50ml',
+  //         'Protetor Solar Facial Episol Pó Compacto Pele Clara FPS50 10g',
+  //         'Protetor Solar Facial Isdin Com Cor Fusion Water Color Clara FPS50 50ml'
+  //       ]
+  //     }
+  //   ],
+  //   preview:{
+  //     estrutura:'O que é? → Composição → Para que serve? → Benefícios → Como usar? → Como funciona? → Quando não usar?',
+  //     keywords:'6 palavras-chave estratégicas: nome do produto, produto+marca, classificação, função/indicação',
+  //     linkagem:'Categoria do produto (com sinônimos linkados) no site Pague Menos',
+  //     metatag:'Máx. 155 caracteres · Nome completo + utilidade + quantidade · Sem hashtags'
+  //   }
+  // } ,
+  {
+    id:'dermo-beleza',
+    name:'Dermo e Beleza',
+    desc:'Rosto, corpo, cabelos, proteção solar e cosméticos dermocosméticos',
+    icon:'💄',
+    bg:'linear-gradient(135deg,#AD1457 0%,#E91E63 100%)',
+    badge:'DERMO E BELEZA',badgeColor:'#AD1457',badgeBg:'#FCE4EC',
+    scriptKey:'DERMO_BELEZA_MAMAES',
+    covers:['Rosto','Proteção Solar','Corpo','Cabelos','Proteção Solar Infantil'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Tipo de Produto',c:'verde'},
+        {l:'Marca',c:'rosa'},
+        {l:'Linha',c:'bege'},
+        {l:'Classificação',c:'lilas'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'}
+      ],
+      examples:[
+        'Sérum Hidratante Corporal Dove Hialurônico + Dermo Renovador 180ml',
+        'Protetor Solar Facial La Roche-Posay Anthelius UV Mune 400 FPS60 50ml',
+        'Creme Facial Nivea Q10 Plus Antissinais Diurno 52g'
+      ]
+    }],
+    preview:{
+      estrutura:'O que é? → Composição → Para que serve? → Benefícios → Como usar? → Como funciona? → Quando não usar?',
+      keywords:'6 palavras-chave: nome do produto, produto+marca, classificação, função/indicação',
+      linkagem:'Categoria do produto (com sinônimos) no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Nome completo + utilidade + quantidade · Sem hashtags'
+    }
+  },
+  {
+    id:'higiene-beleza',
+    name:'Higiene e Beleza',
+    desc:'Higiene pessoal, cabelos, maquiagem, perfumes e coloração',
+    icon:'🪥',
+    bg:'linear-gradient(135deg,#00695C 0%,#26A69A 100%)',
+    badge:'HIGIENE',badgeColor:'#00695C',badgeBg:'#E0F2F1',
+    scriptKey:'HIGIENE_BELEZA_MAMAES',
+    covers:['Higiene e Beleza — Todas as Categorias'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Tipo de Produto',c:'verde'},
+        {l:'Marca',c:'rosa'},
+        {l:'Linha',c:'bege'},
+        {l:'Classificação',c:'lilas'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'}
+      ],
+      examples:[
+        'Refil Escova de Dente Elétrica Oral-B Sensi Ultrafino com 2 Unidades',
+        'Esmalte Risqué Noites Iluminadas Ano Novo no Rio 9,5ml',
+        'Sabonete Íntimo Nivea Fresh Comfort 250ml',
+        'Shampoo Anticaspa Seda Cocriações Hidratação Diária 325ml',
+        "Tinta Casting Creme Gloss L'Oréal 600 Louro Escuro 246g"
+      ]
+    }],
+    preview:{
+      estrutura:'O que é? → Composição → Para que serve? → Benefícios → Como usar? → Advertências',
+      keywords:'6 palavras-chave: nome do produto, produto+marca, classificação, função/indicação',
+      linkagem:'Categoria do produto (com sinônimos) no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Nome completo + utilidade + quantidade + CTA Pague Menos · Sem hashtags'
+    }
+  },
+  {
+    id:'mamaes-bebes',
+    name:'Mamães e Bebês',
+    desc:'Fraldas, banho, higiene, acessórios, alimentos e suplementos infantis',
+    icon:'👶',
+    bg:'linear-gradient(135deg,#C2185B 0%,#F48FB1 100%)',
+    badge:'MAMÃES E BEBÊS',badgeColor:'#C2185B',badgeBg:'#FCE4EC',
+    scriptKey:'MAMAES_SUPLEMENTOS',
+    covers:['Suplementos Infantis','Complementos Infantis','Fórmulas Infantis','Banho','Repelentes','Fraldas','Higiene Bucal'],
+    nomenclatures:[
+      {
+        title:'Produtos Gerais',
+        steps:[
+          {l:'Tipo de Produto',c:'verde'},
+          {l:'Marca',c:'rosa'},
+          {l:'Linha',c:'bege'},
+          {l:'Característica',c:'azul'},
+          {l:'Classificação',c:'lilas'},
+          {l:'Quantidade',c:'salmao'}
+        ],
+        examples:[
+          'Copo de Transição Avent Philips Easy Sip Rosa + 6 Meses 200ml',
+          'Fralda Pampers Pants Ajuste Total XG 66 Unidades',
+          'Repelente Infantil Off Kids! Loção 200ml',
+          'Pomada Para Assadura Bepantol Baby 120g'
+        ]
+      },
+      {
+        title:'Alimentos Infantis',
+        steps:[
+          {l:'Tipo de Produto',c:'verde'},
+          {l:'Marca',c:'rosa'},
+          {l:'Linha',c:'bege'},
+          {l:'Classificação',c:'lilas'},
+          {l:'Sabor',c:'bege'},
+          {l:'Quantidade',c:'salmao'}
+        ],
+        examples:[
+          'Fórmula Infantil Nestonutri 1 a 3 Anos 800g',
+          'Complemento Alimentar Sustagen Kids Chocolate 350g'
+        ]
+      }
+    ],
+    preview:{
+      estrutura:'O que é? → Composição → Para que é indicado? → Benefícios → Como preparar? → Como funciona? → Advertências',
+      keywords:'6 palavras-chave: nome do produto, produto+marca, classificação, função/indicação',
+      linkagem:'Páginas do site Pague Menos',
+      metatag:'Máx. 155 caracteres · Nome + utilidade do produto · Sem hashtags'
+    }
+  },
+  {
+    id:'suplementos-nutricao',
+    name:'Vida Saudável',
+    desc:'Whey protein, vitaminas, suplementos alimentares e bebidas nutritivas',
+    icon:'💪',
+    bg:'linear-gradient(135deg,#2E7D32 0%,#66BB6A 100%)',
+    badge:'SUPLEMENTOS',badgeColor:'#2E7D32',badgeBg:'#E8F5E9',
+    scriptKey:'MAMAES_SUPLEMENTOS',
+    covers:['Suplementos Alimentares','Whey Protein','Bebidas Prontas','Snacks Saudáveis','Complementos Alimentares'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Tipo de Produto',c:'verde'},
+        {l:'Marca',c:'rosa'},
+        {l:'Linha',c:'bege'},
+        {l:'Sabor',c:'bege'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'}
+      ],
+      examples:[
+        'Whey Protein Isolado Integral Médica Darkness Baunilha 900g',
+        'Bebida Prota Piracanjuba Coco Zero Lactose 200ml',
+        'Barra de Proteína Integralmedica Sabor Chocolate 70g'
+      ]
+    }],
+    preview:{
+      estrutura:'O que é? → Composição → Para que é indicado? → Benefícios → Como preparar? → Como funciona? → Advertências',
+      keywords:'6 palavras-chave: nome do produto, produto+marca, classificação, função/indicação',
+      linkagem:'Páginas do site Pague Menos',
+      metatag:'Máx. 155 caracteres · Nome + utilidade do produto · Sem hashtags'
+    }
+  },
+  {
+    id:'alimentos-bebidas',
+    name:'Alimentos e Bebidas',
+    desc:'Chocolates, doces, salgadinhos, bebidas e alimentos em geral',
+    icon:'🍎',
+    bg:'linear-gradient(135deg,#E65100 0%,#FF8F00 100%)',
+    badge:'ALIMENTOS',badgeColor:'#E65100',badgeBg:'#FFF3E0',
+    scriptKey:'ALIMENTOS',
+    covers:['Alimentos e Bebidas','Conveniência Alimentar'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Tipo de Produto',c:'verde'},
+        {l:'Nome',c:'bege'},
+        {l:'Marca',c:'rosa'},
+        {l:'Sabor',c:'bege'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'}
+      ],
+      examples:[
+        'Chocolate Branco Tortuguita Arcor Recheio Chocolate 15,5g',
+        'Whey Piracanjuba Coco 15g de Proteína Zero Lactose 200ml',
+        'Salgadinho Cheetos Elma Chips Super Cheddar 48g'
+      ]
+    }],
+    preview:{
+      estrutura:'O que é? → Ingredientes → Advertências',
+      keywords:'6 palavras-chave: nome do produto, produto+marca, classificação, função/indicação',
+      linkagem:'Nome estruturado conforme busca dos usuários; links opcionais',
+      metatag:'Máx. 155 caracteres · Nome + utilidade do produto · Sem hashtags'
+    }
+  },
+  {
+    id:'conveniencia',
+    name:'Conveniência',
+    desc:'Papelaria, utilidades domésticas e acessórios de uso geral (não alimentos)',
+    icon:'🛒',
+    bg:'linear-gradient(135deg,#37474F 0%,#78909C 100%)',
+    badge:'CONVENIÊNCIA',badgeColor:'#37474F',badgeBg:'#ECEFF1',
+    scriptKey:'NAO_ALIMENTOS',
+    covers:['Conveniência — Não Alimento','Papelaria','Utilidades','Acessórios Gerais'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Tipo de Produto',c:'verde'},
+        {l:'Nome/Funcionalidade',c:'bege'},
+        {l:'Marca',c:'rosa'},
+        {l:'Linha',c:'bege'},
+        {l:'Característica',c:'azul'},
+        {l:'Quantidade',c:'salmao'}
+      ],
+      examples:[
+        'Porta-Documentos Dauf Tech',
+        'Cola Super Bonder Power Flex Gel 2g',
+        'Meia Calça de Alta Compressão Ativa Feminina M Natural Escuro'
+      ]
+    }],
+    preview:{
+      estrutura:'O que é? → Para que serve? → Como usar? → Como funciona? → Advertências',
+      keywords:'10 palavras-chave: nome do produto, utilização, funcionalidade, usos específicos',
+      linkagem:'Negrito em nome, variações e características relevantes do produto',
+      metatag:'Máx. 155 caracteres · Utilidade do produto'
+    }
+  },
+  {
+    id:'kits',
+    name:'Kits',
+    desc:'Kits promocionais e conjuntos de produtos de higiene, beleza e dermocosméticos',
+    icon:'🎁',
+    bg:'linear-gradient(135deg,#004D40 0%,#00897B 100%)',
+    badge:'KITS',badgeColor:'#004D40',badgeBg:'#E0F2F1',
+    scriptKey:'KIT',
+    covers:['Kits Higiene','Kits Beleza','Kits Dermocosméticos','Kits Presentes'],
+    nomenclatures:[{
+      title:null,
+      steps:[
+        {l:'Tipo de Produto',c:'verde'},
+        // {l:'Funcionalidade',c:'bege'},
+        {l:'Marca',c:'rosa'},
+        {l:'Linha',c:'bege'},
+        {l:'Classificação',c:'lilas'},
+        {l:'Quantidade',c:'salmao'}
+      ],
+      examples:['Kit Nivea Sun']
+    }],
+    preview:{
+      estrutura:'O que é? → Produtos do Kit → Para que serve? → Benefícios → Como usar? → Advertências',
+      keywords:'6 palavras-chave: nome do kit, kit+marca, classificação, função/indicação',
+      linkagem:'Marca do kit linkada para página da marca no site Pague Menos',
+      metatag:'Máx. 155 caracteres · Nome completo do kit + utilidade + quantidade · Sem hashtags'
+    }
+  }
+];
+
+/* ================================================================
+   STATE
+   ================================================================ */
+let activeId = null;
+
+/* ================================================================
+   SVG ICONS
+   ================================================================ */
+const IC_COPY = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>`;
+const IC_CHECK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+const IC_CLOSE = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
+const IC_ARR = `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>`;
+
+/* ================================================================
+   HELPERS
+   ================================================================ */
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+const LEGEND_LABELS = {
+  verde:'Tipo de produto / Nome base / Princípio ativo',
+  rosa:'Marca',
+  bege:'Linha / Dosagem / Funcionalidade / Sabor',
+  azul:'Característica / Proteção',
+  lilas:'Classificação / Combinação',
+  salmao:'Quantidade'
+};
+const LEGEND_BG = {
+  verde:'var(--verde-bg)',rosa:'var(--rosa-bg)',bege:'var(--bege-bg)',
+  azul:'var(--azul-bg)',lilas:'var(--lilas-bg)',salmao:'var(--salmao-bg)'
+};
+
+/* ================================================================
+   RENDER NOMENCLATURE PANEL
+   ================================================================ */
+function renderNom(nom){
+  const stepsHtml = nom.steps.map(s=>`<span class="st ${s.c}">${esc(s.l)}</span>`).join('');
+  const used=[...new Set(nom.steps.map(s=>s.c))];
+  const legendHtml=used.map(c=>`<div class="leg-item"><div class="leg-dot" style="background:${LEGEND_BG[c]}"></div>${esc(LEGEND_LABELS[c])}</div>`).join('');
+  const exHtml=nom.examples.map(e=>`<div class="ex-item">${esc(e)}</div>`).join('');
+  return `
+    <div class="steps-row">${stepsHtml}</div>
+    <div class="legend">${legendHtml}</div>
+    <div class="examples-sec">
+      <div class="ex-label">Exemplos de nomenclatura</div>
+      ${exHtml}
+    </div>`;
+}
+
+/* ================================================================
+   RENDER DETAIL
+   ================================================================ */
+function renderDetail(cat){
+  // Nomenclature section
+  let nomHtml='';
+  if(cat.nomenclatures.length===1){
+    nomHtml=renderNom(cat.nomenclatures[0]);
+  } else {
+    const tabs=cat.nomenclatures.map((n,i)=>
+      `<button class="sub-tab${i===0?' active-tab':''}" onclick="switchTab(this,'subp-${cat.id}-${i}')">${esc(n.title)}</button>`
+    ).join('');
+    const panels=cat.nomenclatures.map((n,i)=>
+      `<div class="sub-panel${i===0?' active-panel':''}" id="subp-${cat.id}-${i}">${renderNom(n)}</div>`
+    ).join('');
+    nomHtml=`<div class="sub-tabs">${tabs}</div>${panels}`;
+  }
+
+  // Preview info cards
+  const pcData=[
+    {ico:'📐',lbl:'Estrutura de Título',val:cat.preview.estrutura,bg:'#E3F2FD'},
+    {ico:'🔑',lbl:'Palavras-chave',val:cat.preview.keywords,bg:'#F3E5F5'},
+    {ico:'🔗',lbl:'Linkagem',val:cat.preview.linkagem,bg:'#E8F5E9'},
+    {ico:'📋',lbl:'Meta Tag',val:cat.preview.metatag,bg:'#FFF8E1'}
+  ];
+  const pcHtml=pcData.map(p=>`
+    <div class="pcard">
+      <div class="pcard-icon" style="background:${p.bg}">${p.ico}</div>
+      <div class="pcard-label">${esc(p.lbl)}</div>
+      <div class="pcard-content">${esc(p.val)}</div>
+    </div>`).join('');
+
+  const coverTags=cat.covers.map(c=>`<span class="covers-tag">${esc(c)}</span>`).join('');
+
+  return `
+    <div class="detail-top">
+      <div>
+        <div class="detail-crumb"><span>Categorias</span>${IC_ARR}<span>${esc(cat.name)}</span></div>
+        <div class="detail-title">${esc(cat.name)}</div>
+        <div class="detail-desc">${esc(cat.desc)}</div>
+      </div>
+      <button class="btn-close" onclick="closeDetail()" aria-label="Fechar detalhes">${IC_CLOSE} Fechar</button>
+    </div>
+
+    <div class="block">
+      <div class="block-header">
+        <div class="block-bar" style="background:var(--blue)"></div>
+        <h3 style="color:var(--blue)">Estrutura Ideal da Nomenclatura</h3>
+      </div>
+      ${nomHtml}
+    </div>
+
+    <div class="block">
+      <div class="block-header space-bw">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="block-bar" style="background:var(--red)"></div>
+          <h3 style="color:var(--red)">Descritivo SEO da Categoria</h3>
+        </div>
+        <button class="btn-copy" id="copyBtn" aria-label="Copiar script SEO completo" onclick="copyScript('${cat.scriptKey}')">
+          ${IC_COPY} Copiar Script
+        </button>
+      </div>
+      <div class="preview-grid">${pcHtml}</div>
+      <div class="covers-row">
+        <div class="covers-label">Script aplicável para</div>
+        <div class="covers-tags">${coverTags}</div>
+      </div>
+    </div>`;
+}
+
+/* ================================================================
+   RENDER CARDS
+   ================================================================ */
+function renderCards(){
+  const grid=document.getElementById('catGrid');
+  grid.innerHTML=categories.map(cat=>`
+    <div class="cat-card" id="card-${cat.id}" role="listitem"
+         tabindex="0" aria-label="${esc(cat.name)}"
+         onclick="selectCat('${cat.id}')"
+         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCat('${cat.id}')}">
+      <div class="cc-check" aria-hidden="true">✓</div>
+      <div class="cc-img" style="background:${cat.bg}" aria-hidden="true">${cat.icon}</div>
+      <div class="cc-body">
+        <h3>${esc(cat.name)}</h3>
+        <p>${esc(cat.desc)}</p>
+        <span class="cc-badge" style="background:${cat.badgeBg};color:${cat.badgeColor}">${esc(cat.badge)}</span>
+      </div>
+    </div>`).join('');
+}
+
+/* ================================================================
+   SELECT CATEGORY
+   ================================================================ */
+function selectCat(id){
+  if(activeId) document.getElementById('card-'+activeId)?.classList.remove('active');
+  activeId=id;
+  document.getElementById('card-'+id)?.classList.add('active');
+  const cat=categories.find(c=>c.id===id);
+  if(!cat)return;
+  const wrap=document.getElementById('detailWrap');
+  const inner=document.getElementById('detailInner');
+  wrap.classList.remove('visible');
+  void wrap.offsetWidth;
+  inner.innerHTML=renderDetail(cat);
+  wrap.classList.add('visible');
+  setTimeout(()=>wrap.scrollIntoView({behavior:'smooth',block:'start'}),50);
+}
+
+/* ================================================================
+   CLOSE DETAIL
+   ================================================================ */
+function closeDetail(){
+  document.getElementById('detailWrap').classList.remove('visible');
+  if(activeId){document.getElementById('card-'+activeId)?.classList.remove('active');activeId=null;}
+}
+
+/* ================================================================
+   SWITCH TABS
+   ================================================================ */
+function switchTab(btn,panelId){
+  const block=btn.closest('.block');
+  block.querySelectorAll('.sub-tab').forEach(t=>t.classList.remove('active-tab'));
+  block.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active-panel'));
+  btn.classList.add('active-tab');
+  document.getElementById(panelId)?.classList.add('active-panel');
+}
+
+/* ================================================================
+   COPY SCRIPT
+   ================================================================ */
+function copyScript(key){
+  const txt=SCRIPTS[key];
+  if(!txt)return;
+  const doFeedback=()=>{
+    showToast();
+    const btn=document.getElementById('copyBtn');
+    if(btn){btn.innerHTML=IC_CHECK+' Copiado!';btn.classList.add('done');setTimeout(()=>{btn.innerHTML=IC_COPY+' Copiar Script';btn.classList.remove('done');},2500);}
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(doFeedback).catch(()=>{fallbackCopy(txt);doFeedback();});
+  } else {fallbackCopy(txt);doFeedback();}
+}
+
+function fallbackCopy(txt){
+  const ta=document.createElement('textarea');
+  ta.value=txt;ta.style.cssText='position:fixed;opacity:0;top:0;left:0;pointer-events:none';
+  document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();
+}
+
+/* ================================================================
+   TOAST
+   ================================================================ */
+function showToast(){
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+/* ================================================================
+   INIT
+   ================================================================ */
+renderCards();
+</script>
+</body>
+</html>
