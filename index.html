@@ -159,6 +159,37 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
 .meta-preview{background:#fff;border:1px solid var(--gray-200);border-left:4px solid var(--red);border-radius:var(--radius-md);padding:16px;font-size:14px;color:var(--gray-700);line-height:1.65}
 .meta-count{display:inline-flex;margin-top:10px;background:var(--gray-100);color:var(--gray-500);border-radius:999px;padding:4px 10px;font-size:11px;font-weight:800}
 
+/* ─── VISUAL IMAGE GUIDE ─── */
+.visual-guide{display:grid;gap:22px}
+.visual-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:22px;align-items:center;background:var(--blue);border-radius:var(--radius-xl);padding:24px;overflow:hidden;color:#fff}
+.visual-hero h3{font-size:24px;font-weight:900;line-height:1.2;margin-bottom:8px}
+.visual-hero p{font-size:14px;color:rgba(255,255,255,.82);max-width:520px}
+.visual-rules{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.visual-rule{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800}
+.visual-hero-img{background:#fff;border-radius:var(--radius-md);padding:12px;min-height:220px;display:flex;align-items:center;justify-content:center}
+.visual-hero-img img{width:100%;height:220px;object-fit:contain;display:block}
+.visual-specs{display:flex;flex-wrap:wrap;gap:10px}
+.visual-spec{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:12px 14px;font-size:13px;font-weight:900;color:var(--gray-700);box-shadow:var(--shadow-sm)}
+.visual-section{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:22px;box-shadow:var(--shadow-sm)}
+.visual-section-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.visual-section-title{font-size:16px;font-weight:900;color:var(--gray-900);text-transform:uppercase;letter-spacing:.8px}
+.visual-section-note{font-size:12px;font-weight:800;color:var(--gray-500)}
+.approved-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.approved-card{border:1px solid var(--gray-200);border-radius:var(--radius-md);overflow:hidden;background:var(--gray-50)}
+.approved-card img{width:100%;height:190px;object-fit:contain;background:#fff;display:block}
+.approved-card span{display:block;padding:9px 10px;font-size:11px;font-weight:900;color:var(--verde-fg);background:var(--verde-bg)}
+.do-dont{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.do-card,.dont-card{border-radius:var(--radius-md);padding:16px;border:1px solid var(--gray-200)}
+.do-card{background:#F0FDF4}.dont-card{background:#FFF1F2}
+.do-card h4,.dont-card h4{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.do-card h4{color:var(--verde-fg)}.dont-card h4{color:var(--red)}
+.do-card ul,.dont-card ul{list-style:none;display:grid;gap:8px}
+.do-card li,.dont-card li{font-size:13px;color:var(--gray-700);font-weight:700}
+.bad-example{margin-top:14px;border:1px dashed #FDA4AF;border-radius:var(--radius-md);background:#FFF1F2;padding:16px}
+.bad-example-title{font-size:12px;font-weight:900;color:var(--red);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px}
+.checklist-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.check-item{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:11px 12px;font-size:13px;font-weight:800;color:var(--gray-700)}
+
 /* ─── BLOCKS ─── */
 .block{background:#fff;border-radius:var(--radius-xl);border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);padding:28px;margin-bottom:20px}
 .block-header{display:flex;align-items:center;gap:10px;margin-bottom:22px}
@@ -240,6 +271,8 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
   .detail-tab:last-child{border-bottom:0}
   .detail-panel{padding:20px 16px}
   .guide-grid{grid-template-columns:1fr}
+  .visual-hero{grid-template-columns:1fr;padding:18px}
+  .approved-grid,.do-dont{grid-template-columns:1fr}
   .detail-top{flex-direction:column}
   .detail-title{font-size:21px}
 }
@@ -267,7 +300,7 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-eyebrow" aria-hidden="true">Guia SEO · Time Digital</div>
+      <div class="hero-eyebrow" aria-hidden="true">Guia Interno · Time Digital</div>
       <h2 id="hero-heading">Nomenclatura <span>correta</span>,<br>descrições que convertem.</h2>
       <p>Selecione uma categoria para visualizar o padrão de nomenclatura e o roteiro SEO correspondente. Copie o script com um clique.</p>
       <div class="hero-chips" aria-label="Resumo do guia">
@@ -775,57 +808,6 @@ const categories = [
       metatag:'Máx. 155 caracteres · Utilidade do produto'
     }
   },
-  // {
-  //   id:'dermocosmeticos',
-  //   name:'Dermocosméticos',
-  //   desc:'Produtos dermocosméticos para cuidados corporais e proteção solar',
-  //   icon:'🧴',
-  //   bg:'linear-gradient(135deg,#6A1B9A 0%,#AB47BC 100%)',
-  //   badge:'DERMO',badgeColor:'#6A1B9A',badgeBg:'#F3E5F5',
-  //   scriptKey:'DERMO_COSMETICOS',
-  //   covers:['Dermocosméticos - Corpo','Dermocosméticos - Proteção Solar','Mamães e Bebês - Dermo'],
-  //   nomenclatures:[
-  //     {
-  //       title:'Cuidados com o Corpo',
-  //       steps:[
-  //         {l:'Tipo de Produto',c:'verde'},
-  //         {l:'Funcionalidade',c:'bege'},
-  //         {l:'Marca',c:'rosa'},
-  //         {l:'Linha',c:'bege'},
-  //         {l:'Classificação',c:'lilas'},
-  //         {l:'Quantidade',c:'salmao'}
-  //       ],
-  //       examples:[
-  //         'Sabonete Líquido Dermotivin Salix Pele Mista a Oleosa 300ml',
-  //         'Hidratante Corporal Intensivo Epidrat Peles Secas 450g',
-  //         'Loção para Pernas e Pés Fletop 200ml'
-  //       ]
-  //     },
-  //     {
-  //       title:'Proteção Solar',
-  //       steps:[
-  //         {l:'Tipo de Produto',c:'verde'},
-  //         {l:'Marca',c:'rosa'},
-  //         {l:'Classificação',c:'lilas'},
-  //         {l:'Linha',c:'bege'},
-  //         {l:'Cor',c:'azul'},
-  //         {l:'Proteção',c:'azul'},
-  //         {l:'Quantidade',c:'salmao'}
-  //       ],
-  //       examples:[
-  //         'Protetor Solar Facial La Roche-Posay Anthelius UV Mune 400 FPS60 50ml',
-  //         'Protetor Solar Facial Episol Pó Compacto Pele Clara FPS50 10g',
-  //         'Protetor Solar Facial Isdin Com Cor Fusion Water Color Clara FPS50 50ml'
-  //       ]
-  //     }
-  //   ],
-  //   preview:{
-  //     estrutura:'O que é? → Composição → Para que serve? → Benefícios → Como usar? → Como funciona? → Quando não usar?',
-  //     keywords:'6 palavras-chave estratégicas: nome do produto, produto+marca, classificação, função/indicação',
-  //     linkagem:'Categoria do produto (com sinônimos linkados) no site Pague Menos',
-  //     metatag:'Máx. 155 caracteres · Nome completo + utilidade + quantidade · Sem hashtags'
-  //   }
-  // },
   {
     id:'dermo-beleza',
     name:'Dermo e Beleza',
@@ -1649,27 +1631,146 @@ function renderKeywordPreview(keywords){
   return `<ul class="keyword-preview">${keywords.map(k=>`<li>${esc(k)}</li>`).join('')}</ul>`;
 }
 
+const VISUAL_IMAGE_FILES = {
+  'medicamentos-gerais':['medicamentos/Tarja Vermelha 12.jpg','medicamentos/TARJA VERMELHA RETENÇÃO 4.jpg'],
+  'medicamentos-frascos':['medicamentos/Tarja Vermelha 12.jpg','medicamentos/TARJA PRETA RETENÇÃO 3.jpg'],
+  genericos:['medicamentos/GENÉRICO TARJA VERMELHA 4.jpg','medicamentos/GENÉRICO TARJA VERMELHA RETENÇÃO 3.jpg'],
+  'generico-combinacao':['medicamentos/GENÉRICO TARJA VERMELHA 4.jpg','medicamentos/GENÉRICO TARJA PRETA RETENÇÃO 3.jpg'],
+  'generico-varios-ativos':['medicamentos/GENÉRICO TARJA VERMELHA RETENÇÃO 3.jpg','medicamentos/GENÉRICO TARJA PRETA RETENÇÃO 3.jpg'],
+  'aparelhos-saude':['aparelhos-de-saude-e-acessorios-hospitalares hero.png','aparelhos-de-saude-e-acessorios-hospitalares 1.png','aparelhos-de-saude-e-acessorios-hospitalares secundaria.png'],
+  'alimentos-bebidas':['alimentos-e-bebidas hero.png','alimentos-e-bebidas 1.png','alimentos-e-bebidas secundaria.png'],
+  conveniencia:['conveniencia  hero.png','conveniencia  0.png','conveniencia secundaria.png'],
+  'dermo-beleza':['Dermo e beleza hero.png','Dermo e beleza 1.png','Dermo e beleza secundaria.png'],
+  'higiene-beleza':['Higiene Pessoal Hero.png','Higiene Pessoal 1.png','Higiene pessoal secundaria.png'],
+  kits:['kits hero.png','kits 1.png','kits secundaria.png'],
+  'mamaes-bebes':['Mamãe e bebê hero.png','Mamãe e bebê 1.png','Mamãe e bebê secundaria.png'],
+  'suplementos-nutricao':['vida-saudavel hero.png','vida-saudavel 1.png','vida-saudavel secundaria.png']
+};
+
+function visualFiles(cat){
+  return VISUAL_IMAGE_FILES[cat.id]||VISUAL_IMAGE_FILES['dermo-beleza'];
+}
+
+function imagePath(file){
+  return 'image/'+file.split('/').map(part=>encodeURIComponent(part)).join('/');
+}
+
+function renderApprovedImages(files,labels){
+  return files.map((file,i)=>`
+    <figure class="approved-card">
+      <img src="${imagePath(file)}" alt="${esc(labels[i])}">
+      <span>✓ ${esc(labels[i])}</span>
+    </figure>`).join('');
+}
+
 function renderImageGuide(cat){
   const img=IMAGE_GUIDE_BY_ID[cat.id]||IMAGE_GUIDE_BY_ID.dermocosmeticos;
+  const files=visualFiles(cat);
+  const isMedication=cat.scriptKey==='MEDICAMENTO';
+  const primaryFiles=files.slice(0,2);
+  const primaryLabels=isMedication?['Caixa frontal aprovada','Padrão de tarja visível']:['Fundo branco','Produto centralizado'];
+  const secondarySection=isMedication?'':`
+      <section class="visual-section">
+        <div class="visual-section-head">
+          <div class="visual-section-title">Imagens secundárias</div>
+          <div class="visual-section-note">Mostre uso, textura, benefícios e componentes</div>
+        </div>
+        <div class="approved-grid">
+          ${renderApprovedImages([files[2]],['Imagem secundária aprovada'])}
+        </div>
+        <div class="do-dont">
+          <div class="do-card">
+            <h4>Faça</h4>
+            <ul>
+              ${img.secondary.slice(0,5).map(item=>`<li>✓ ${esc(item)}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="dont-card">
+            <h4>Não faça</h4>
+            <ul>
+              <li>✕ Produto muito distante</li>
+              <li>✕ Informações ilegíveis</li>
+              <li>✕ Fundo poluído</li>
+              <li>✕ Cenário excessivo</li>
+            </ul>
+          </div>
+        </div>
+      </section>`;
   return `
-    <div class="tab-intro">
-      <div>
-        <div class="tab-title">Guia de Imagens para Site e App</div>
-        <div class="detail-desc">Padrões para fornecedores, fabricantes e equipes de cadastro produzirem imagens claras, consistentes e publicáveis.</div>
+    <div class="visual-guide">
+      <section class="visual-hero">
+        <div>
+          <h3>Guia de Imagens Site e App</h3>
+          <p>Use os exemplos abaixo como referência. Faça igual aos exemplos aprovados e evite os padrões reprovados.</p>
+          <div class="visual-rules">
+            <span class="visual-rule">✓ Fundo branco</span>
+            <span class="visual-rule">✓ Produto centralizado</span>
+            <span class="visual-rule">✓ Alta resolução</span>
+            <span class="visual-rule">✓ Sem promoções</span>
+          </div>
+        </div>
+        <div class="visual-hero-img">
+          <img src="${imagePath(files[0])}" alt="Exemplo aprovado para ${esc(cat.name)}">
+        </div>
+      </section>
+
+      <div class="visual-specs">
+        <div class="visual-spec">📐 1200x1200 px mínimo</div>
+        <div class="visual-spec">⬜ Formato 1:1</div>
+        <div class="visual-spec">🔍 Alta nitidez</div>
+        <div class="visual-spec">🖼️ JPG | JPEG | PNG | WEBP</div>
       </div>
-    </div>
-    <div class="guide-grid">
-      ${renderGuideCard('Formatos aceitos',IMAGE_GUIDE_GENERAL.formats)}
-      ${renderGuideCard('Dimensões e proporção',IMAGE_GUIDE_GENERAL.specs)}
-      ${renderGuideCard('Imagem principal',IMAGE_GUIDE_GENERAL.main)}
-      ${renderGuideCard('Imagens secundárias',IMAGE_GUIDE_GENERAL.secondary)}
-      ${renderGuideCard(`Principal · ${cat.name}`,img.main)}
-      ${renderGuideCard(`Secundárias · ${cat.name}`,img.secondary)}
-      ${renderGuideCard('Não permitido na imagem principal',IMAGE_GUIDE_GENERAL.forbidden,'danger')}
-      <div class="guide-card full">
-        <h4>Objetivo final</h4>
-        <p>Todas as imagens devem transmitir profissionalismo, clareza, padronização e confiança, garantindo consistência entre Site, App, Marketplace e demais canais digitais da Pague Menos.</p>
-      </div>
+
+      <section class="visual-section">
+        <div class="visual-section-head">
+          <div class="visual-section-title">Imagem principal</div>
+          <div class="visual-section-note">Exemplos aprovados</div>
+        </div>
+        <div class="approved-grid">
+          ${renderApprovedImages(primaryFiles,primaryLabels)}
+        </div>
+        <div class="do-dont">
+          <div class="do-card">
+            <h4>Faça</h4>
+            <ul>
+              <li>✓ Fundo branco</li>
+              <li>✓ Produto ocupando cerca de 80% da área</li>
+              <li>✓ Marca legível</li>
+              <li>✓ Sem elementos extras</li>
+            </ul>
+          </div>
+          <div class="dont-card">
+            <h4>Não faça</h4>
+            <ul>
+              <li>✕ Fundo colorido</li>
+              <li>✕ Pessoa ou mão segurando produto</li>
+              <li>✕ Selos promocionais</li>
+              <li>✕ Montagens ou colagens</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bad-example">
+          <div class="bad-example-title">Exemplo reprovado</div>
+          <p>Produto com fundo colorido, informações promocionais, marca pouco legível ou composição poluída deve ser recusado.</p>
+        </div>
+      </section>
+
+      ${secondarySection}
+
+      <section class="visual-section">
+        <div class="visual-section-head">
+          <div class="visual-section-title">Checklist final</div>
+          <div class="visual-section-note">Valide antes de enviar</div>
+        </div>
+        <div class="checklist-grid">
+          <div class="check-item">☐ Fundo branco</div>
+          <div class="check-item">☐ 1200x1200 px</div>
+          <div class="check-item">☐ Produto centralizado</div>
+          <div class="check-item">☐ Sem promoções</div>
+          <div class="check-item">☐ Marca visível</div>
+          <div class="check-item">☐ WEBP/JPG/PNG</div>
+        </div>
+      </section>
     </div>`;
 }
 
