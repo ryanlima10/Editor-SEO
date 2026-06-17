@@ -16,6 +16,7 @@
   --gray-50:#F8FAFC;--gray-100:#F1F5F9;--gray-200:#E2E8F0;
   --gray-300:#CBD5E1;--gray-400:#94A3B8;--gray-500:#64748B;
   --gray-700:#334155;--gray-900:#0F172A;
+  --blue-light:#EEF5FF;
   --verde-bg:#D9F2DE;--verde-fg:#145A1F;
   --rosa-bg:#FFE0EF;--rosa-fg:#8B1044;
   --bege-bg:#FFF1D4;--bege-fg:#7A4500;
@@ -119,6 +120,45 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
 .btn-close{padding:9px 16px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-sm);cursor:pointer;font-family:var(--font);font-size:12px;font-weight:700;color:var(--gray-700);display:flex;align-items:center;gap:6px;transition:all .15s;flex-shrink:0;box-shadow:var(--shadow-sm)}
 .btn-close:hover{background:var(--gray-100)}
 
+/* ─── DETAIL TABS ─── */
+.detail-tabs-wrap{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-xl);box-shadow:var(--shadow-md);overflow:hidden}
+.detail-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--gray-100);border-bottom:1px solid var(--gray-200)}
+.detail-tab{min-height:72px;padding:12px 10px;border:0;border-right:1px solid var(--gray-200);background:transparent;color:var(--gray-500);cursor:pointer;font-family:var(--font);font-weight:800;font-size:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.detail-tab:last-child{border-right:0}
+.detail-tab:hover{background:#fff;color:var(--blue)}
+.detail-tab.active-detail-tab{background:#fff;color:var(--blue);box-shadow:inset 0 -3px 0 var(--red)}
+.detail-tab-ic{width:30px;height:30px;border-radius:8px;background:rgba(0,0,190,.08);display:flex;align-items:center;justify-content:center;font-size:15px}
+.detail-tab.active-detail-tab .detail-tab-ic{background:var(--blue);color:#fff}
+.detail-panel{display:none;padding:28px}
+.detail-panel.active-detail-panel{display:block}
+.tab-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px;flex-wrap:wrap}
+.tab-title{font-size:20px;font-weight:900;color:var(--gray-900);line-height:1.25}
+.tab-copy{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.guide-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:18px}
+.guide-card.full{grid-column:1/-1}
+.guide-card h4{font-size:12px;font-weight:900;color:var(--gray-900);text-transform:uppercase;letter-spacing:.7px;margin-bottom:10px}
+.guide-card p{font-size:13px;color:var(--gray-700);line-height:1.7}
+.guide-list{display:grid;gap:8px;list-style:none}
+.guide-list li{position:relative;padding-left:18px;font-size:13px;color:var(--gray-700);line-height:1.55}
+.guide-list li::before{content:'✓';position:absolute;left:0;top:0;color:var(--blue);font-weight:900}
+.guide-list.danger li::before{content:'×';color:var(--red)}
+.guide-callout{background:var(--blue-light);border-left:4px solid var(--blue);border-radius:var(--radius-sm);padding:14px 16px;font-size:13px;color:var(--gray-700);line-height:1.65}
+.rendered-example{margin-top:14px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:18px;color:var(--gray-700);line-height:1.7}
+.rendered-example h2{font-size:17px;font-weight:900;color:var(--gray-900);margin:18px 0 8px}
+.rendered-example h2:first-child{margin-top:0}
+.rendered-example p{font-size:14px;margin:0 0 10px}
+.rendered-example ul{padding-left:20px;margin:8px 0 12px}
+.rendered-example li{font-size:14px;margin:5px 0}
+.rendered-example a{color:var(--blue);font-weight:800;text-decoration:none}
+.rendered-example a:hover{text-decoration:underline}
+.keyword-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.keyword-tag{background:var(--blue-light);color:var(--blue);border:1px solid #CFE2FF;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}
+.keyword-preview{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:16px 18px}
+.keyword-preview li{font-size:14px;color:var(--gray-700);line-height:1.6;margin:4px 0}
+.meta-preview{background:#fff;border:1px solid var(--gray-200);border-left:4px solid var(--red);border-radius:var(--radius-md);padding:16px;font-size:14px;color:var(--gray-700);line-height:1.65}
+.meta-count{display:inline-flex;margin-top:10px;background:var(--gray-100);color:var(--gray-500);border-radius:999px;padding:4px 10px;font-size:11px;font-weight:800}
+
 /* ─── BLOCKS ─── */
 .block{background:#fff;border-radius:var(--radius-xl);border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);padding:28px;margin-bottom:20px}
 .block-header{display:flex;align-items:center;gap:10px;margin-bottom:22px}
@@ -195,6 +235,11 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
   .block{padding:20px 16px}
   .st{font-size:9.5px;padding:7px 20px 7px 15px}
   .preview-grid{grid-template-columns:1fr}
+  .detail-tabs{grid-template-columns:1fr}
+  .detail-tab{min-height:54px;flex-direction:row;justify-content:flex-start;padding:10px 14px;border-right:0;border-bottom:1px solid var(--gray-200)}
+  .detail-tab:last-child{border-bottom:0}
+  .detail-panel{padding:20px 16px}
+  .guide-grid{grid-template-columns:1fr}
   .detail-top{flex-direction:column}
   .detail-title{font-size:21px}
 }
@@ -222,11 +267,11 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-eyebrow" aria-hidden="true">Guia Interno · Time Digital</div>
+      <div class="hero-eyebrow" aria-hidden="true">Guia SEO · Time Digital</div>
       <h2 id="hero-heading">Nomenclatura <span>correta</span>,<br>descrições que convertem.</h2>
       <p>Selecione uma categoria para visualizar o padrão de nomenclatura e o roteiro SEO correspondente. Copie o script com um clique.</p>
       <div class="hero-chips" aria-label="Resumo do guia">
-        <div class="hero-chip"><span class="n">14</span> Categorias</div>
+        <div class="hero-chip"><span class="n">13</span> Categorias</div>
         <div class="hero-chip"><span class="n">10</span> Scripts SEO</div>
         <div class="hero-chip"><span class="n">6</span> Tipos de Etapas</div>
       </div>
@@ -259,7 +304,7 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
     <h2>Categorias de Produtos</h2>
     <p>Clique em um card para ver o padrão de nomenclatura e o script SEO correspondente</p>
   </div>
-  <div class="sec-count">14 categorias</div>
+  <div class="sec-count">13 categorias</div>
 </div>
 <div class="cat-grid" id="catGrid" role="list" aria-label="Categorias de produtos"></div>
 
@@ -733,7 +778,7 @@ const categories = [
   // {
   //   id:'dermocosmeticos',
   //   name:'Dermocosméticos',
-  //   desc:'Produtos dermocosmético para cuidados corporais e proteção solar',
+  //   desc:'Produtos dermocosméticos para cuidados corporais e proteção solar',
   //   icon:'🧴',
   //   bg:'linear-gradient(135deg,#6A1B9A 0%,#AB47BC 100%)',
   //   badge:'DERMO',badgeColor:'#6A1B9A',badgeBg:'#F3E5F5',
@@ -780,7 +825,7 @@ const categories = [
   //     linkagem:'Categoria do produto (com sinônimos linkados) no site Pague Menos',
   //     metatag:'Máx. 155 caracteres · Nome completo + utilidade + quantidade · Sem hashtags'
   //   }
-  // } ,
+  // },
   {
     id:'dermo-beleza',
     name:'Dermo e Beleza',
@@ -1054,6 +1099,256 @@ const LEGEND_BG = {
   azul:'var(--azul-bg)',lilas:'var(--lilas-bg)',salmao:'var(--salmao-bg)'
 };
 
+const IMAGE_GUIDE_GENERAL = {
+  formats:['JPG','JPEG','PNG','WEBP (preferencial)'],
+  main:[
+    'Fundo 100% branco (#FFFFFF)',
+    'Produto centralizado e ocupando aproximadamente 80% da área útil',
+    'Vista frontal da embalagem, com nome e informações principais legíveis',
+    'Sem sombras artificiais, reflexos excessivos, gradientes ou elementos decorativos'
+  ],
+  secondary:[
+    'Vistas lateral e traseira da embalagem',
+    'Tampa, sistema de abertura, componentes internos ou acessórios',
+    'Textura, composição, modo de uso, benefícios e diferenciais',
+    'Cenários, pessoas, ambientações e infográficos, mantendo o produto como elemento principal'
+  ],
+  specs:['Tamanho mínimo: 1200 x 1200 px','Proporção recomendada: 1:1 (quadrada)','Resolução mínima: 72 dpi','Imagem nítida, limpa e sem distorções'],
+  forbidden:['Fundo colorido ou cenários na imagem principal','Pessoas, mãos segurando o produto ou objetos decorativos',"Selos promocionais, textos publicitários, marcas d'água ou molduras",'Colagens, montagens, sombras artificiais e informações temporárias']
+};
+
+const IMAGE_GUIDE_BY_ID = {
+  'medicamentos-gerais':{
+    main:['Caixa ou embalagem frontal','Fundo branco','Nome e apresentação visíveis'],
+    secondary:['Lateral da embalagem','Verso com informações','Blister, comprimidos ou frasco','Detalhes de dosagem e composição']
+  },
+  'medicamentos-frascos':{
+    main:['Frasco, spray, conta-gotas ou aplicador em destaque','Fundo branco','Produto centralizado'],
+    secondary:['Sistema de aplicação','Tampa aberta','Aplicador destacado','Demonstração de uso']
+  },
+  genericos:{
+    main:['Embalagem frontal padrão de medicamento genérico','Fundo branco','Informações de dosagem legíveis'],
+    secondary:['Lateral da embalagem','Informações de dosagem','Forma farmacêutica']
+  },
+  'generico-combinacao':{
+    main:['Embalagem frontal','Fundo branco','Princípios ativos destacados'],
+    secondary:['Explicação visual da combinação','Composição','Forma farmacêutica']
+  },
+  'generico-varios-ativos':{
+    main:['Embalagem frontal','Fundo branco','Ativos principais legíveis'],
+    secondary:['Informações dos ativos','Benefícios terapêuticos','Forma de apresentação']
+  },
+  'aparelhos-saude':{
+    main:['Produto completo','Fundo branco','Vista frontal'],
+    secondary:['Componentes inclusos','Demonstração de uso','Tela, visor ou acessórios','Detalhamento técnico']
+  },
+  dermocosmeticos:{
+    main:['Produto frontal','Fundo branco','Rótulo visível'],
+    secondary:['Textura da fórmula','Aplicação na pele','Ingredientes ilustrativos','Benefícios do produto','Aplicador ou embalagem aberta']
+  },
+  'dermo-beleza':{
+    main:['Produto frontal','Fundo branco','Rótulo visível'],
+    secondary:['Textura da fórmula','Aplicação na pele','Ingredientes ilustrativos','Benefícios do produto','Aplicador ou embalagem aberta']
+  },
+  'higiene-beleza':{
+    main:['Embalagem frontal','Fundo branco','Marca e versão visíveis'],
+    secondary:['Demonstração de uso','Tampa aberta','Textura do produto','Benefícios destacados','Ingredientes ilustrativos']
+  },
+  'mamaes-bebes':{
+    main:['Produto frontal','Fundo branco','Informações principais legíveis'],
+    secondary:['Demonstração de uso','Componentes inclusos','Benefícios do produto','Bebê utilizando o produto, quando aplicável']
+  },
+  'suplementos-nutricao':{
+    main:['Embalagem frontal','Fundo branco','Sabor e quantidade visíveis'],
+    secondary:['Tabela nutricional','Ingredientes','Produto preparado','Sugestão de consumo','Scoop ou dosador','Benefícios nutricionais']
+  },
+  'alimentos-bebidas':{
+    main:['Embalagem frontal','Fundo branco','Produto e variação visíveis'],
+    secondary:['Produto servido','Ingredientes principais','Informações nutricionais','Sugestões de consumo']
+  },
+  conveniencia:{
+    main:['Produto frontal','Fundo branco','Diferencial principal visível'],
+    secondary:['Diferenciais do produto','Componentes inclusos','Demonstração de uso','Aplicações práticas']
+  },
+  kits:{
+    main:['Todos os itens do kit organizados frontalmente','Fundo branco','Conteúdo completo visível'],
+    secondary:['Itens individualmente destacados','Demonstração de uso combinado','Benefícios do conjunto','Componentes inclusos']
+  }
+};
+
+const SEO_EXAMPLES_BY_ID = {
+  'medicamentos-gerais':{
+    html:`<h2>O que é Produto X 500mg?</h2>
+<p><strong>Produto X 500mg</strong> é um medicamento indicado para auxiliar no tratamento de sintomas relacionados à condição X, conforme orientação médica. Sua formulação contém <strong>princípio ativo X</strong> em dosagem adequada para uso adulto.</p>
+<p><strong>Conteúdo da embalagem:</strong> 20 comprimidos.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<p><strong>Indicação etária:</strong> Uso adulto.</p>
+<h2>Composição Produto X 500mg:</h2>
+<p><strong>Princípio ativo:</strong> <a href=https://www.paguemenos.com.br/principio-ativo-x>princípio ativo X</a> 500mg.</p>
+<p><strong>Excipientes:</strong> excipiente X, excipiente Y e excipiente Z.</p>
+<h2>Para que serve Produto X?</h2>
+<p>O <strong>Produto X</strong> serve para auxiliar no cuidado de sintomas da condição X, contribuindo para o bem-estar durante o tratamento.</p>`,
+    keywords:['Produto X 500mg','Produto X comprimidos','princípio ativo X','medicamento Produto X','Produto X para que serve','Produto X bula','Produto X uso adulto','Produto X 20 comprimidos','Nome da Indústria Produto X','comprar Produto X'],
+    meta:'Produto X 500mg auxilia no tratamento da condição X. Confira composição, indicação e compre na Pague Menos.'
+  },
+  'medicamentos-frascos':{
+    html:`<h2>O que é Produto X Spray 50ml?</h2>
+<p><strong>Produto X Spray 50ml</strong> é um medicamento em frasco com aplicador, desenvolvido para facilitar o uso direto na área indicada, conforme orientação profissional.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 frasco spray com 50ml.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição Produto X Spray:</h2>
+<p><strong>Princípio ativo:</strong> <a href=https://www.paguemenos.com.br/principio-ativo-x>princípio ativo X</a> X mg/ml.</p>
+<h2>Como devo usar Produto X Spray?</h2>
+<ul><li>Agite antes de usar.</li><li>Aplique conforme orientação da bula ou prescrição.</li><li>Evite contato com olhos e mucosas.</li></ul>`,
+    keywords:['Produto X spray','Produto X 50ml','spray Produto X','medicamento com aplicador','princípio ativo X spray','Produto X frasco','Produto X como usar','Produto X aplicação','Nome da Indústria spray','comprar Produto X spray'],
+    meta:'Produto X Spray 50ml tem aplicador prático para uso conforme orientação. Veja detalhes e compre na Pague Menos.'
+  },
+  genericos:{
+    html:`<h2>O que é Princípio Ativo X 500mg Genérico?</h2>
+<p><strong>Princípio Ativo X 500mg Genérico</strong> é um medicamento genérico indicado para auxiliar no tratamento da condição X, com qualidade e segurança conforme normas regulatórias.</p>
+<p><strong>Conteúdo da embalagem:</strong> 20 comprimidos.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição Princípio Ativo X 500mg:</h2>
+<p><strong>Princípio ativo:</strong> <a href=https://www.paguemenos.com.br/principio-ativo-x>princípio ativo X</a> 500mg.</p>
+<h2>Para que serve Princípio Ativo X?</h2>
+<p>Serve para auxiliar no tratamento de sintomas relacionados à condição X, de acordo com prescrição médica.</p>`,
+    keywords:['princípio ativo X genérico','genérico Produto X','princípio ativo X 500mg','medicamento genérico','genérico 20 comprimidos','princípio ativo X para que serve','princípio ativo X bula','Nome da Indústria genérico','comprar genérico','Produto X genérico'],
+    meta:'Princípio Ativo X 500mg Genérico auxilia no tratamento da condição X. Confira detalhes e compre na Pague Menos.'
+  },
+  'generico-combinacao':{
+    html:`<h2>O que é Princípio Ativo X + Princípio Ativo Y Genérico?</h2>
+<p><strong>Princípio Ativo X + Princípio Ativo Y Genérico</strong> combina dois ativos em uma formulação indicada para auxiliar no tratamento da condição X, conforme prescrição.</p>
+<p><strong>Conteúdo da embalagem:</strong> 30 comprimidos.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição:</h2>
+<p><strong>Princípio ativo:</strong> princípio ativo X X mg + princípio ativo Y Y mg.</p>
+<h2>Para que serve?</h2>
+<p>Serve para auxiliar no cuidado da condição X quando há necessidade de combinação terapêutica indicada por profissional de saúde.</p>`,
+    keywords:['princípio ativo X princípio ativo Y','genérico combinação','medicamento combinado','Produto X genérico combinado','princípio ativo X Y mg','combinação terapêutica','genérico 30 comprimidos','Nome da Indústria combinação','comprar genérico combinado','Produto X para que serve'],
+    meta:'Genérico com Princípio Ativo X + Y auxilia no tratamento da condição X. Veja composição e compre na Pague Menos.'
+  },
+  'generico-varios-ativos':{
+    html:`<h2>O que é Produto X Multiação Genérico?</h2>
+<p><strong>Produto X Multiação Genérico</strong> possui vários princípios ativos associados para auxiliar no cuidado de sintomas da condição X, conforme indicação da bula.</p>
+<p><strong>Conteúdo da embalagem:</strong> 12 comprimidos.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição Produto X Multiação:</h2>
+<p><strong>Princípios ativos:</strong> princípio ativo X X mg, princípio ativo Y Y mg e princípio ativo Z Z mg.</p>
+<h2>Para que serve Produto X Multiação?</h2>
+<p>Serve para auxiliar no alívio de diferentes sintomas associados à condição X.</p>`,
+    keywords:['Produto X multiação','genérico vários ativos','princípio ativo X Y Z','medicamento multiação','Produto X 12 comprimidos','multissintomas genérico','Produto X composição','Nome da Indústria multiação','comprar Produto X genérico','Produto X para que serve'],
+    meta:'Produto X Multiação Genérico combina ativos para auxiliar nos sintomas da condição X. Confira na Pague Menos.'
+  },
+  'aparelhos-saude':{
+    html:`<h2>O que é o Produto X?</h2>
+<p>O <strong>Produto X</strong> é um aparelho de saúde indicado para auxiliar no monitoramento ou cuidado diário, oferecendo praticidade, precisão e facilidade de uso.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 aparelho, acessórios e manual de instruções.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve o Produto X?</h2>
+<ul><li>Auxilia no acompanhamento de dados de saúde.</li><li>Facilita o uso doméstico ou profissional.</li><li>Contribui para uma rotina de cuidados mais prática.</li></ul>
+<h2>Como devo usar o Produto X?</h2>
+<p>Utilize conforme o manual do fabricante e higienize os componentes após o uso quando aplicável.</p>`,
+    keywords:['Produto X aparelho','aparelho de saúde Produto X','acessório hospitalar','Produto X como usar','monitoramento de saúde','Produto X manual','Nome da Indústria aparelho','aparelho doméstico saúde','comprar Produto X','Produto X acessórios'],
+    meta:'Produto X auxilia no monitoramento de saúde com uso prático. Confira acessórios e compre na Pague Menos.'
+  },
+  dermocosmeticos:{
+    html:`<h2>O que é Produto X Dermocosmético?</h2>
+<p>O <strong>Produto X Dermocosmético</strong> é indicado para cuidados específicos da pele, com fórmula desenvolvida para auxiliar na hidratação, proteção e melhora da aparência cutânea.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade com 50g.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve Produto X?</h2>
+<ul><li>Auxilia na hidratação da pele.</li><li>Contribui para a proteção da barreira cutânea.</li><li>Ajuda a melhorar textura e conforto.</li></ul>
+<h2>Como devo usar Produto X?</h2>
+<p>Aplique sobre a pele limpa e seca, conforme recomendação de uso do fabricante.</p>`,
+    keywords:['Produto X dermocosmético','Produto X pele','hidratante Produto X','dermocosmético 50g','cuidados com a pele','Produto X como usar','Nome da Indústria dermocosmético','Produto X hidratação','comprar Produto X pele','Produto X benefícios'],
+    meta:'Produto X Dermocosmético auxilia na hidratação e cuidado da pele. Veja benefícios e compre na Pague Menos.'
+  },
+  'dermo-beleza':{
+    html:`<h2>O que é Produto X Beleza?</h2>
+<p>O <strong>Produto X Beleza</strong> é um item de cuidado pessoal desenvolvido para auxiliar na rotina de beleza, proporcionando acabamento, praticidade e sensação de cuidado.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade com 100ml.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve Produto X Beleza?</h2>
+<p>Serve para complementar a rotina de cuidados, ajudando a manter aparência saudável e confortável.</p>
+<h2>Como devo usar?</h2>
+<p>Aplique conforme a finalidade do produto e as instruções do fabricante.</p>`,
+    keywords:['Produto X beleza','Produto X 100ml','cuidado de beleza','rotina de beleza','Produto X como usar','Nome da Indústria beleza','Produto X benefícios','beleza e cuidado pessoal','comprar Produto X','Produto X Pague Menos'],
+    meta:'Produto X Beleza complementa sua rotina de cuidados com praticidade. Confira detalhes na Pague Menos.'
+  },
+  'higiene-beleza':{
+    html:`<h2>O que é Produto X Higiene?</h2>
+<p>O <strong>Produto X Higiene</strong> é indicado para uso diário na rotina de higiene pessoal, ajudando a promover limpeza, frescor e sensação de cuidado.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade com 200ml.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve Produto X Higiene?</h2>
+<ul><li>Auxilia na limpeza diária.</li><li>Proporciona sensação de frescor.</li><li>Contribui para uma rotina de cuidado pessoal.</li></ul>
+<h2>Como devo usar?</h2>
+<p>Aplique durante o banho ou conforme recomendação da embalagem.</p>`,
+    keywords:['Produto X higiene','Produto X 200ml','higiene pessoal','limpeza diária','Produto X banho','Produto X como usar','Nome da Indústria higiene','cuidado pessoal Produto X','comprar Produto X higiene','Produto X benefícios'],
+    meta:'Produto X Higiene ajuda na limpeza diária e cuidado pessoal. Confira benefícios e compre na Pague Menos.'
+  },
+  'mamaes-bebes':{
+    html:`<h2>O que é Produto X Bebê?</h2>
+<p>O <strong>Produto X Bebê</strong> foi desenvolvido para auxiliar nos cuidados diários de bebês e crianças, com fórmula ou composição adequada para uma rotina delicada.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve Produto X Bebê?</h2>
+<p>Serve para apoiar a rotina de cuidado infantil, oferecendo praticidade e segurança conforme orientação do fabricante.</p>
+<h2>Como devo usar?</h2>
+<p>Utilize sob supervisão de um adulto e siga as instruções da embalagem.</p>`,
+    keywords:['Produto X bebê','Produto X mamães e bebês','cuidado infantil','Produto X infantil','Produto X como usar','Nome da Indústria bebê','rotina do bebê','comprar Produto X bebê','Produto X crianças','Produto X benefícios'],
+    meta:'Produto X Bebê auxilia nos cuidados diários infantis com praticidade. Confira detalhes na Pague Menos.'
+  },
+  'suplementos-nutricao':{
+    html:`<h2>O que é Produto X Suplemento?</h2>
+<p>O <strong>Produto X Suplemento</strong> é indicado para complementar a alimentação, oferecendo nutrientes que auxiliam na rotina de vida saudável.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 pote com 300g.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve Produto X Suplemento?</h2>
+<ul><li>Auxilia na complementação nutricional.</li><li>Contribui para a rotina de treinos ou bem-estar.</li><li>Ajuda a manter uma alimentação equilibrada.</li></ul>
+<h2>Como consumir?</h2>
+<p>Prepare conforme indicação do rótulo ou orientação de nutricionista.</p>`,
+    keywords:['Produto X suplemento','suplemento Produto X','Produto X 300g','vida saudável','complemento nutricional','Produto X como consumir','Nome da Indústria suplemento','Produto X sabor X','comprar Produto X suplemento','Produto X benefícios'],
+    meta:'Produto X Suplemento complementa a alimentação e apoia uma rotina saudável. Compre na Pague Menos.'
+  },
+  'alimentos-bebidas':{
+    html:`<h2>O que é Produto X Alimento?</h2>
+<p>O <strong>Produto X Alimento</strong> é uma opção prática para consumo no dia a dia, com sabor X e embalagem pensada para conveniência.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade com 250g.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve Produto X Alimento?</h2>
+<p>Serve como opção alimentar para diferentes momentos da rotina, seguindo as informações nutricionais do rótulo.</p>
+<h2>Como consumir?</h2>
+<p>Consuma conforme sugestão de preparo ou consumo indicada na embalagem.</p>`,
+    keywords:['Produto X alimento','Produto X bebida','Produto X 250g','alimento sabor X','Produto X como consumir','Nome da Indústria alimento','informação nutricional Produto X','comprar Produto X alimento','Produto X lanche','Produto X Pague Menos'],
+    meta:'Produto X Alimento sabor X é uma opção prática para o dia a dia. Confira detalhes na Pague Menos.'
+  },
+  conveniencia:{
+    html:`<h2>O que é Produto X Conveniência?</h2>
+<p>O <strong>Produto X Conveniência</strong> é um item prático para facilitar a rotina, com uso simples e aplicação versátil no dia a dia.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve Produto X?</h2>
+<ul><li>Facilita tarefas do cotidiano.</li><li>Oferece praticidade no uso.</li><li>Atende necessidades rápidas de cuidado, organização ou bem-estar.</li></ul>
+<h2>Como devo usar?</h2>
+<p>Utilize conforme instruções da embalagem e finalidade do produto.</p>`,
+    keywords:['Produto X conveniência','item de conveniência','Produto X uso diário','Produto X prático','Produto X como usar','Nome da Indústria conveniência','Produto X benefícios','comprar Produto X','Produto X rotina','Produto X Pague Menos'],
+    meta:'Produto X Conveniência facilita a rotina com uso prático. Confira detalhes e compre na Pague Menos.'
+  },
+  kits:{
+    html:`<h2>O que é Kit Produto X?</h2>
+<p>O <strong>Kit Produto X</strong> reúne itens selecionados para uma rotina de cuidado completa, combinando praticidade, economia e conveniência em uma única embalagem.</p>
+<p><strong>Conteúdo da embalagem:</strong> 3 produtos do kit.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Produtos do Kit Produto X:</h2>
+<ul><li>Produto X 1 unidade.</li><li>Produto Y 1 unidade.</li><li>Produto Z 1 unidade.</li></ul>
+<h2>Para que serve Kit Produto X?</h2>
+<p>Serve para facilitar a rotina de cuidado com produtos complementares organizados em um conjunto.</p>`,
+    keywords:['Kit Produto X','kit de cuidados','Produto X kit','kit Nome da Indústria','kit 3 produtos','kit higiene beleza','Kit Produto X benefícios','comprar Kit Produto X','kit presente','Kit Produto X Pague Menos'],
+    meta:'Kit Produto X reúne 3 itens para uma rotina de cuidado prática e completa. Confira na Pague Menos.'
+  }
+};
+
 /* ================================================================
    RENDER NOMENCLATURE PANEL
    ================================================================ */
@@ -1071,11 +1366,318 @@ function renderNom(nom){
     </div>`;
 }
 
+function renderGuideList(items,type=''){
+  return `<ul class="guide-list ${type}">${items.map(item=>`<li>${esc(item)}</li>`).join('')}</ul>`;
+}
+
+function renderGuideCard(title,items,type=''){
+  return `<div class="guide-card"><h4>${esc(title)}</h4>${renderGuideList(items,type)}</div>`;
+}
+
+function getSeoExample(cat){
+  const examples={
+    'medicamentos-gerais':{
+      html:`<h2>O que é Produto X 500mg?</h2>
+<p><strong>Produto X 500mg</strong> é um medicamento indicado para auxiliar no tratamento da <strong>condição X</strong>, conforme orientação médica. Sua fórmula contém <strong>princípio ativo X 500mg</strong>, substância utilizada para contribuir com o controle dos sintomas relacionados à indicação do produto.</p>
+<p><strong>Conteúdo da embalagem:</strong> 20 comprimidos.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<p><strong>Indicação etária:</strong> Uso adulto.</p>
+<h2>Composição Produto X 500mg:</h2>
+<p><strong>Princípio ativo:</strong> <a href=https://www.paguemenos.com.br/principio-ativo-x>princípio ativo X</a> 500mg.</p>
+<p><strong>Excipientes:</strong> [INSERIR INFORMAÇÃO].</p>
+<h2>Para que serve Produto X?</h2>
+<p>O <strong>Produto X</strong> serve para auxiliar no tratamento da <strong>condição X</strong>, ajudando no controle de sintomas conforme indicação médica e informações presentes na bula.</p>
+<h2>Como devo tomar Produto X 500mg?</h2>
+<ul><li>Tome <strong>Produto X 500mg</strong> conforme orientação médica ou farmacêutica.</li><li>Não altere a dose, o horário ou a duração do tratamento sem orientação profissional.</li><li>Em caso de dúvidas, consulte a bula do medicamento.</li></ul>
+<h2>Quando não devo tomar Produto X?</h2>
+<p>Não tome <strong>Produto X</strong> em caso de alergia ao <strong>princípio ativo X</strong> ou a qualquer componente da fórmula. Pessoas gestantes, lactantes, crianças ou pacientes com condições específicas devem usar somente com orientação profissional.</p>`,
+      keywords:['Produto X 500mg','Produto X comprimidos','princípio ativo X','Produto X para que serve','Produto X como tomar','Produto X bula','medicamento condição X','Produto X uso adulto','Nome da Indústria Produto X','comprar Produto X'],
+      meta:'Produto X 500mg auxilia no tratamento da condição X. Veja indicação, composição e compre na Pague Menos!'
+    },
+    'medicamentos-frascos':{
+      html:`<h2>O que é Produto X Spray 50ml?</h2>
+<p><strong>Produto X Spray 50ml</strong> é um medicamento em frasco com aplicador, indicado para auxiliar no tratamento da <strong>condição X</strong>, conforme orientação médica. Sua apresentação em spray facilita a <strong>aplicação localizada</strong> e o uso diário quando recomendado.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 frasco spray com 50ml.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<p><strong>Indicação etária:</strong> Uso adulto.</p>
+<h2>Composição Produto X Spray 50ml:</h2>
+<p><strong>Princípio ativo:</strong> <a href=https://www.paguemenos.com.br/principio-ativo-x>princípio ativo X</a> X mg/ml.</p>
+<p><strong>Excipientes:</strong> [INSERIR INFORMAÇÃO].</p>
+<h2>Para que serve Produto X Spray?</h2>
+<p>O <strong>Produto X Spray</strong> serve para auxiliar no cuidado da <strong>condição X</strong>, permitindo aplicação prática por meio do frasco com spray.</p>
+<h2>Como devo usar Produto X Spray 50ml?</h2>
+<ul><li>Agite o frasco antes de usar, se indicado na embalagem.</li><li>Aplique <strong>Produto X Spray</strong> na área recomendada, conforme orientação médica.</li><li>Evite contato com olhos, mucosas e áreas não indicadas.</li></ul>
+<h2>Quando não devo usar Produto X Spray?</h2>
+<p>Não use <strong>Produto X Spray</strong> se houver alergia ao <strong>princípio ativo X</strong> ou a qualquer componente da fórmula. Suspenda o uso e procure orientação profissional em caso de irritação ou reação inesperada.</p>`,
+      keywords:['Produto X Spray 50ml','Produto X spray','princípio ativo X spray','medicamento em frasco','Produto X como usar','Produto X aplicador','Produto X condição X','spray uso adulto','Nome da Indústria spray','comprar Produto X spray'],
+      meta:'Produto X Spray 50ml auxilia no cuidado da condição X com aplicação prática. Compre na Pague Menos!'
+    },
+    genericos:{
+      html:`<h2>O que é Princípio Ativo X 500mg Genérico?</h2>
+<p><strong>Princípio Ativo X 500mg Genérico</strong> é um medicamento genérico indicado para auxiliar no tratamento da <strong>condição X</strong>, conforme orientação médica. Ele contém o mesmo <strong>princípio ativo X</strong> em dosagem informada na embalagem.</p>
+<p><strong>Conteúdo da embalagem:</strong> 20 comprimidos.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<p><strong>Indicação etária:</strong> Uso adulto.</p>
+<h2>Composição Princípio Ativo X 500mg:</h2>
+<p><strong>Princípio ativo:</strong> <a href=https://www.paguemenos.com.br/principio-ativo-x>princípio ativo X</a> 500mg.</p>
+<p><strong>Excipientes:</strong> [INSERIR INFORMAÇÃO].</p>
+<h2>Para que serve Princípio Ativo X?</h2>
+<p>O <strong>Princípio Ativo X</strong> serve para auxiliar no tratamento da <strong>condição X</strong>, de acordo com prescrição médica e informações da bula.</p>
+<h2>Como devo tomar Princípio Ativo X 500mg?</h2>
+<ul><li>Tome conforme prescrição médica.</li><li>Não interrompa o tratamento sem orientação.</li><li>Leia a bula antes de iniciar o uso.</li></ul>
+<h2>Quando não devo tomar Princípio Ativo X?</h2>
+<p>Não tome em caso de alergia ao <strong>princípio ativo X</strong> ou aos excipientes. Use com orientação profissional em caso de gestação, lactação ou doenças preexistentes.</p>`,
+      keywords:['princípio ativo X genérico','Princípio Ativo X 500mg','genérico Produto X','medicamento genérico','Princípio Ativo X para que serve','Princípio Ativo X como tomar','Princípio Ativo X bula','genérico condição X','Nome da Indústria genérico','comprar genérico'],
+      meta:'Princípio Ativo X 500mg Genérico auxilia no tratamento da condição X. Compre na Pague Menos!'
+    },
+    'generico-combinacao':{
+      html:`<h2>O que é Princípio Ativo X + Princípio Ativo Y Genérico?</h2>
+<p><strong>Princípio Ativo X + Princípio Ativo Y Genérico</strong> é um medicamento com combinação de ativos indicado para auxiliar no tratamento da <strong>condição X</strong>, conforme orientação médica. A associação de <strong>princípio ativo X</strong> e <strong>princípio ativo Y</strong> deve ser utilizada de acordo com a bula.</p>
+<p><strong>Conteúdo da embalagem:</strong> 30 comprimidos.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<p><strong>Indicação etária:</strong> Uso adulto.</p>
+<h2>Composição Princípio Ativo X + Princípio Ativo Y:</h2>
+<p><strong>Princípio ativo:</strong> princípio ativo X X mg + princípio ativo Y Y mg.</p>
+<p><strong>Excipientes:</strong> [INSERIR INFORMAÇÃO].</p>
+<h2>Para que serve Princípio Ativo X + Princípio Ativo Y?</h2>
+<p>Serve para auxiliar no tratamento da <strong>condição X</strong> quando há indicação de uso combinado dos ativos pelo profissional de saúde.</p>
+<h2>Como devo tomar Princípio Ativo X + Princípio Ativo Y?</h2>
+<ul><li>Tome conforme a dose prescrita.</li><li>Evite associar com outros medicamentos sem orientação.</li><li>Consulte a bula para informações completas.</li></ul>
+<h2>Quando não devo tomar Princípio Ativo X + Princípio Ativo Y?</h2>
+<p>Não tome se houver alergia a qualquer ativo ou componente da fórmula. Em caso de gestação, lactação, uso de outros medicamentos ou doenças preexistentes, procure orientação profissional.</p>`,
+      keywords:['Princípio Ativo X Y genérico','genérico combinação','medicamento combinado','Princípio Ativo X + Y','Produto X genérico combinado','combinação condição X','genérico 30 comprimidos','medicamento com dois ativos','Nome da Indústria combinação','comprar genérico combinado'],
+      meta:'Princípio Ativo X + Y Genérico auxilia no tratamento da condição X. Compre na Pague Menos!'
+    },
+    'generico-varios-ativos':{
+      html:`<h2>O que é Produto X Multiação Genérico?</h2>
+<p><strong>Produto X Multiação Genérico</strong> é um medicamento com vários princípios ativos indicado para auxiliar no cuidado de sintomas associados à <strong>condição X</strong>, conforme orientação médica. Sua fórmula reúne <strong>princípio ativo X</strong>, <strong>princípio ativo Y</strong> e <strong>princípio ativo Z</strong>.</p>
+<p><strong>Conteúdo da embalagem:</strong> 12 comprimidos.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<p><strong>Indicação etária:</strong> Uso adulto.</p>
+<h2>Composição Produto X Multiação:</h2>
+<p><strong>Princípio ativo:</strong> princípio ativo X X mg, princípio ativo Y Y mg e princípio ativo Z Z mg.</p>
+<p><strong>Excipientes:</strong> [INSERIR INFORMAÇÃO].</p>
+<h2>Para que serve Produto X Multiação?</h2>
+<p>O <strong>Produto X Multiação</strong> serve para auxiliar no alívio de diferentes sintomas relacionados à <strong>condição X</strong>, de acordo com a bula e orientação profissional.</p>
+<h2>Como devo tomar Produto X Multiação?</h2>
+<ul><li>Tome conforme orientação médica.</li><li>Não exceda a dose indicada.</li><li>Evite o uso simultâneo com produtos semelhantes sem orientação.</li></ul>
+<h2>Quando não devo tomar Produto X Multiação?</h2>
+<p>Não tome em caso de alergia a qualquer ativo da fórmula. Pessoas com condições específicas, gestantes, lactantes ou pacientes em uso de outros medicamentos devem consultar um profissional de saúde.</p>`,
+      keywords:['Produto X Multiação','genérico vários ativos','medicamento multiação','princípio ativo X Y Z','Produto X para sintomas','Produto X como tomar','Produto X bula','multiação condição X','Nome da Indústria multiação','comprar Produto X Multiação'],
+      meta:'Produto X Multiação Genérico auxilia nos sintomas da condição X. Confira na Pague Menos!'
+    },
+    'aparelhos-saude':{
+      html:`<h2>O que é o Produto X?</h2>
+<p>O <strong>Produto X</strong> é um aparelho de saúde indicado para auxiliar no <strong>monitoramento da condição X</strong> e no acompanhamento da rotina de cuidados. Ele oferece uso prático, leitura facilitada e suporte para uso doméstico ou profissional.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 aparelho, acessórios e manual de instruções.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para quem é indicado o Produto X?</h2>
+<p>O <strong>Produto X</strong> é indicado para pessoas que precisam acompanhar informações de saúde com praticidade, conforme recomendação profissional quando necessário.</p>
+<h2>Para que serve o Produto X?</h2>
+<p>O <strong>Produto X</strong> serve para:</p>
+<ul><li>Auxiliar no <strong>monitoramento de saúde</strong>.</li><li>Facilitar medições ou cuidados de rotina.</li><li>Apoiar o acompanhamento de dados relevantes no dia a dia.</li></ul>
+<h2>Como devo usar o Produto X?</h2>
+<ul><li>Leia o manual antes do primeiro uso.</li><li>Prepare o aparelho conforme as instruções do fabricante.</li><li>Faça a medição ou aplicação conforme orientação do produto.</li></ul>
+<h2>Como funciona o Produto X?</h2>
+<p>O <strong>Produto X</strong> funciona por meio de sistema eletrônico ou mecânico que auxilia na leitura, aplicação ou suporte ao cuidado indicado pelo fabricante.</p>
+<h2>Cuidados importantes o Produto X:</h2>
+<p>Mantenha o aparelho limpo, seco e armazenado em local adequado. Evite quedas, umidade excessiva e uso fora das orientações do manual.</p>
+<h2>Quanto tempo dura o Produto X?</h2>
+<p>A durabilidade do <strong>Produto X</strong> depende da frequência de uso, conservação, troca de pilhas ou acessórios e orientações do fabricante.</p>
+<h2>Contraindicações:</h2>
+<ul><li>Não utilize se o aparelho estiver danificado.</li><li>Não substitui avaliação médica ou orientação profissional.</li><li>Use apenas conforme a finalidade indicada pelo fabricante.</li></ul>`,
+      keywords:['Produto X aparelho','aparelho de saúde','Produto X monitoramento','acessório hospitalar','Produto X como usar','Produto X manual','monitoramento da condição X','Nome da Indústria aparelho','comprar Produto X aparelho','Produto X saúde'],
+      meta:'Produto X auxilia no monitoramento de saúde com uso prático. Confira na Pague Menos!'
+    },
+    dermocosmeticos:{
+      html:`<h2>O que é o Produto X Dermocosmético 50g?</h2>
+<p>O <strong>Produto X Dermocosmético 50g</strong> é um produto para cuidados com a pele indicado para auxiliar na <strong>hidratação</strong>, proteção e melhora da aparência cutânea. Sua fórmula é pensada para uma rotina de cuidado diária.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade com 50g.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição o Produto X Hidratante:</h2>
+<p><strong>Ingredientes:</strong> ativo X, ingrediente Y e base hidratante. [INSERIR INFORMAÇÃO].</p>
+<h2>Para que serve o Produto X Hidratante?</h2>
+<p>O <strong>Produto X Hidratante</strong> serve para auxiliar na <strong>hidratação da pele</strong>, contribuindo para conforto, maciez e cuidado da barreira cutânea.</p>
+<h2>Benefícios do Produto X Dermocosmético 50g:</h2>
+<ul><li>Auxilia na <strong>hidratação intensa</strong>.</li><li>Ajuda a melhorar a textura da pele.</li><li>Contribui para sensação de conforto.</li><li>Possui aplicação prática na rotina diária.</li></ul>
+<h2>Como devo usar o produto Nome da Indústria?</h2>
+<p>Aplique o <strong>Produto X</strong> sobre a pele limpa e seca, massageando suavemente até completa absorção. Use conforme orientação do fabricante.</p>
+<h2>Como funciona Produto X Dermocosmético?</h2>
+<p>O <strong>Produto X Dermocosmético</strong> funciona formando uma camada de cuidado que ajuda a manter a pele hidratada e protegida contra o ressecamento.</p>
+<h2>Quando não devo usar Produto X:</h2>
+<p>Não use em caso de alergia a qualquer componente da fórmula. Em caso de irritação, suspenda o uso e procure orientação profissional.</p>`,
+      keywords:['Produto X Dermocosmético','Produto X hidratante','dermocosmético 50g','Produto X pele','hidratação da pele','Produto X como usar'],
+      meta:'Produto X Dermocosmético 50g hidrata e ajuda no cuidado diário da pele. Confira na Pague Menos!'
+    },
+    'dermo-beleza':{
+      html:`<h2>O que é o Produto X Beleza 100ml?</h2>
+<p>O <strong>Produto X Beleza 100ml</strong> é um item de dermo e beleza indicado para complementar a rotina de cuidados, promovendo <strong>hidratação</strong>, acabamento e sensação de bem-estar.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade com 100ml.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição o Produto X Beleza:</h2>
+<p><strong>Ingredientes:</strong> ativo X, ingrediente Y e fragrância. [INSERIR INFORMAÇÃO].</p>
+<h2>Para que serve o Produto X Beleza?</h2>
+<p>O <strong>Produto X Beleza</strong> serve para auxiliar nos cuidados diários, ajudando a manter a pele ou os cabelos com aparência saudável e toque agradável.</p>
+<h2>Benefícios do Produto X Beleza 100ml:</h2>
+<ul><li>Ajuda na <strong>hidratação</strong>.</li><li>Proporciona sensação de cuidado.</li><li>Tem aplicação prática.</li><li>Complementa a rotina de beleza.</li></ul>
+<h2>Como devo usar o produto Nome da Indústria?</h2>
+<p>Aplique o <strong>Produto X Beleza</strong> conforme a finalidade do produto e as instruções do fabricante.</p>
+<h2>Como funciona Produto X Nome da Indústria?</h2>
+<p>O <strong>Produto X</strong> atua auxiliando no cuidado externo, promovendo melhor aparência, conforto e sensação de hidratação.</p>
+<h2>Quando não devo usar Produto X:</h2>
+<p>Não utilize em caso de alergia a componentes da fórmula. Evite contato com os olhos e suspenda o uso em caso de irritação.</p>`,
+      keywords:['Produto X Beleza','Produto X 100ml','dermo e beleza','Produto X hidratação','Produto X como usar','Nome da Indústria Produto X'],
+      meta:'Produto X Beleza 100ml auxilia na hidratação e rotina de cuidados. Confira na Pague Menos!'
+    },
+    'higiene-beleza':{
+      html:`<h2>O que é Produto X Higiene 200ml?</h2>
+<p><strong>Produto X Higiene 200ml</strong> é um produto de higiene pessoal indicado para uso diário, auxiliando na <strong>limpeza</strong>, frescor e cuidado da pele ou área de aplicação.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade com 200ml.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição do Produto X Higiene 200ml:</h2>
+<p><strong>Ingredientes:</strong> ingrediente X, ingrediente Y e fragrância. [INSERIR INFORMAÇÃO].</p>
+<h2>Para que serve o Produto X Higiene?</h2>
+<p>O <strong>Produto X Higiene</strong> serve para auxiliar na <strong>limpeza diária</strong>, proporcionando sensação de frescor e cuidado pessoal.</p>
+<h2>Benefícios do Produto X Higiene 200ml:</h2>
+<ul><li>Promove <strong>limpeza eficaz</strong>.</li><li>Ajuda a manter sensação de frescor.</li><li>É prático para uso diário.</li><li>Contribui para a rotina de higiene pessoal.</li></ul>
+<h2>Como usar o Produto X Higiene?</h2>
+<p>Aplique o <strong>Produto X Higiene</strong> na área indicada, espalhe suavemente e enxágue ou finalize conforme instruções da embalagem.</p>
+<h2>Advertências:</h2>
+<p>Uso externo. Evite contato com os olhos. Não utilize em pele irritada ou lesionada. Em caso de reação, suspenda o uso e procure orientação profissional.</p>`,
+      keywords:['Produto X Higiene','Produto X 200ml','higiene pessoal','limpeza diária','Produto X como usar','Nome da Indústria higiene'],
+      meta:'Produto X Higiene 200ml auxilia na limpeza diária e cuidado pessoal. Compre na Pague Menos!'
+    },
+    'mamaes-bebes':{
+      html:`<h2>O que é Produto X Infantil?</h2>
+<p><strong>Produto X Infantil</strong> é um produto para a rotina de mamães e bebês, indicado para auxiliar no cuidado diário com praticidade e delicadeza. Sua composição deve ser usada conforme as orientações do fabricante.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição Produto X Infantil:</h2>
+<p>O <strong>Produto X Infantil</strong> contém:</p>
+<p><strong>Ingredientes:</strong> [INSERIR INFORMAÇÃO].</p>
+<p><strong>Informações nutricionais:</strong> calorias, proteínas, carboidratos, açúcares e gorduras: [INSERIR INFORMAÇÃO].</p>
+<h2>Para que é indicado Produto X Nome da Indústria?</h2>
+<p>O <strong>Produto X Infantil</strong> é indicado para auxiliar na rotina de cuidado ou alimentação infantil, conforme a finalidade do produto e orientação profissional quando necessário.</p>
+<h2>Benefícios Produto X Infantil:</h2>
+<ul><li>Auxilia na rotina de <strong>cuidados infantis</strong>.</li><li>Oferece praticidade para pais e responsáveis.</li><li>Conta com aplicação ou preparo simples.</li></ul>
+<h2>Como preparar Produto X Infantil?</h2>
+<p>Prepare ou utilize o <strong>Produto X Infantil</strong> conforme as instruções da embalagem. Caso seja um alimento, siga corretamente a quantidade de água, medida e forma de preparo indicadas.</p>
+<h2>Como funciona Produto X?</h2>
+<p>O <strong>Produto X</strong> funciona como apoio à rotina infantil, oferecendo cuidado, praticidade ou complementação conforme sua categoria.</p>
+<h2>Advertências:</h2>
+<p>Use sob supervisão de um adulto. Em caso de dúvidas, alergias ou restrições, consulte um profissional de saúde antes do uso.</p>`,
+      keywords:['Produto X Infantil','Produto X bebê','mamães e bebês','cuidado infantil','Produto X como preparar','Nome da Indústria infantil'],
+      meta:'Produto X Infantil auxilia na rotina de cuidado de bebês e crianças. Confira na Pague Menos!'
+    },
+    'suplementos-nutricao':{
+      html:`<h2>O que é Produto X Suplemento?</h2>
+<p><strong>Produto X Suplemento</strong> é um produto de vida saudável indicado para complementar a alimentação e auxiliar na rotina nutricional. Sua fórmula pode contribuir para o consumo de <strong>nutrientes importantes</strong>, conforme orientação profissional.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 pote com 300g.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Composição Produto X Suplemento:</h2>
+<p>O <strong>Produto X Suplemento</strong> contém:</p>
+<p><strong>Ingredientes:</strong> proteína X, carboidrato Y, vitaminas e minerais. [INSERIR INFORMAÇÃO].</p>
+<p><strong>Informações nutricionais:</strong> calorias, proteínas, carboidratos, açúcares e gorduras: [INSERIR INFORMAÇÃO].</p>
+<h2>Para que é indicado Produto X Nome da Indústria?</h2>
+<p>O <strong>Produto X Suplemento</strong> é indicado para pessoas que buscam complementar a alimentação e apoiar uma rotina de <strong>vida saudável</strong>.</p>
+<h2>Benefícios Produto X Suplemento:</h2>
+<ul><li>Auxilia na <strong>complementação nutricional</strong>.</li><li>Contribui para a rotina de treinos ou bem-estar.</li><li>Possui preparo prático.</li></ul>
+<h2>Como preparar Produto X Suplemento?</h2>
+<p>Misture a porção indicada do <strong>Produto X Suplemento</strong> em água, leite ou bebida de preferência, conforme instruções do rótulo.</p>
+<h2>Como funciona Produto X?</h2>
+<p>O <strong>Produto X</strong> funciona fornecendo nutrientes que complementam a alimentação diária, de acordo com a composição do produto.</p>
+<h2>Advertências:</h2>
+<p>Este produto não substitui uma alimentação equilibrada. Gestantes, lactantes, crianças e pessoas com restrições alimentares devem consultar um profissional de saúde.</p>`,
+      keywords:['Produto X Suplemento','suplemento 300g','vida saudável','complementação nutricional','Produto X como preparar','Nome da Indústria suplemento'],
+      meta:'Produto X Suplemento 300g complementa a alimentação e apoia uma rotina saudável. Confira na Pague Menos!'
+    },
+    'alimentos-bebidas':{
+      html:`<h2>O que é Produto X Alimento 250g?</h2>
+<p><strong>Produto X Alimento 250g</strong> é uma opção prática para consumo no dia a dia, indicada para quem busca conveniência, sabor e facilidade na rotina alimentar.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade com 250g.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Ingredientes Produto X Alimento 250g:</h2>
+<p><strong>Ingredientes:</strong> ingrediente X, ingrediente Y e ingrediente Z. [INSERIR INFORMAÇÃO].</p>
+<p><strong>Informações nutricionais:</strong> calorias, proteínas, carboidratos, açúcares e gorduras: [INSERIR INFORMAÇÃO].</p>
+<h2>Advertências:</h2>
+<p>Conservar conforme orientação da embalagem. Verifique a lista de ingredientes antes do consumo, especialmente em caso de alergias ou restrições alimentares.</p>`,
+      keywords:['Produto X Alimento','Produto X 250g','alimento prático','Produto X ingredientes','Produto X informação nutricional','Nome da Indústria alimento'],
+      meta:'Produto X Alimento 250g é uma opção prática para o dia a dia. Confira na Pague Menos!'
+    },
+    conveniencia:{
+      html:`<h2>O que é o Produto X Conveniência?</h2>
+<p>O <strong>Produto X Conveniência</strong> é um item prático para uso no dia a dia, indicado para facilitar tarefas de cuidado, organização ou bem-estar com aplicação simples.</p>
+<p><strong>Conteúdo da embalagem:</strong> 1 unidade.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Para que serve o Produto X Conveniência?</h2>
+<p>O <strong>Produto X Conveniência</strong> serve para:</p>
+<ul><li>Facilitar atividades da rotina.</li><li>Oferecer <strong>praticidade de uso</strong>.</li><li>Apoiar cuidados rápidos no dia a dia.</li></ul>
+<h2>Como devo usar o Produto X?</h2>
+<ul><li>Utilize conforme a finalidade informada na embalagem.</li><li>Siga as orientações do fabricante.</li><li>Armazene em local seco e seguro.</li></ul>
+<h2>Como funciona o Produto X Conveniência?</h2>
+<p>O <strong>Produto X</strong> funciona como apoio prático para a rotina, entregando sua funcionalidade principal de forma simples e acessível.</p>
+<h2>Advertências:</h2>
+<p>Mantenha fora do alcance de crianças quando aplicável. Não utilize se a embalagem estiver violada ou danificada.</p>
+<h2>Contraindicações:</h2>
+<p>Não use o <strong>Produto X</strong> para finalidade diferente da indicada pelo fabricante. Em caso de sensibilidade ou restrição, consulte orientação profissional.</p>`,
+      keywords:['Produto X Conveniência','item de conveniência','Produto X uso diário','Produto X prático','Produto X como usar','Produto X rotina','Nome da Indústria conveniência','comprar Produto X','Produto X benefícios','Produto X Pague Menos'],
+      meta:'Produto X Conveniência facilita a rotina com uso prático. Confira na Pague Menos!'
+    },
+    kits:{
+      html:`<h2>O que é o Kit Produto X?</h2>
+<p>O <strong>Kit Produto X</strong> reúne itens selecionados para uma rotina de cuidado completa, oferecendo praticidade, conveniência e melhor organização dos produtos em uma única embalagem.</p>
+<p><strong>Conteúdo da embalagem:</strong> 3 produtos do kit.</p>
+<p><strong>Fabricado por:</strong> <a href=https://www.paguemenos.com.br/nome-da-industria>Nome da Indústria</a>.</p>
+<h2>Produtos do Kit Produto X</h2>
+<ul><li><strong>Produto X 1:</strong> 1 unidade.</li><li><strong>Produto X 2:</strong> 1 unidade.</li><li><strong>Produto X 3:</strong> 1 unidade.</li></ul>
+<h2>Para que serve o Kit Produto X?</h2>
+<p>O <strong>Kit Produto X</strong> serve para facilitar a rotina de cuidados, combinando produtos complementares para uso conjunto ou sequencial.</p>
+<h2>Benefícios o Kit Produto X:</h2>
+<ul><li>Reúne <strong>produtos complementares</strong>.</li><li>Facilita a compra em conjunto.</li><li>Ajuda a manter uma rotina de cuidado mais organizada.</li></ul>
+<h2>Como devo usar o Kit Produto X?</h2>
+<p>Utilize cada item do <strong>Kit Produto X</strong> conforme a orientação indicada na embalagem individual de cada produto.</p>
+<h2>Advertências:</h2>
+<p>Leia as instruções de todos os itens do kit antes do uso. Não utilize produtos com embalagem violada ou em caso de alergia a algum componente.</p>`,
+      keywords:['Kit Produto X','kit de cuidados','kit Nome da Indústria','Kit Produto X 3 produtos','produtos complementares','comprar Kit Produto X'],
+      meta:'Kit Produto X reúne 3 itens para uma rotina de cuidado prática. Confira na Pague Menos!'
+    }
+  };
+  return examples[cat.id]||SEO_EXAMPLES_BY_ID[cat.id]||SEO_EXAMPLES_BY_ID.dermocosmeticos;
+}
+
+function renderKeywordPreview(keywords){
+  return `<ul class="keyword-preview">${keywords.map(k=>`<li>${esc(k)}</li>`).join('')}</ul>`;
+}
+
+function renderImageGuide(cat){
+  const img=IMAGE_GUIDE_BY_ID[cat.id]||IMAGE_GUIDE_BY_ID.dermocosmeticos;
+  return `
+    <div class="tab-intro">
+      <div>
+        <div class="tab-title">Guia de Imagens para Site e App</div>
+        <div class="detail-desc">Padrões para fornecedores, fabricantes e equipes de cadastro produzirem imagens claras, consistentes e publicáveis.</div>
+      </div>
+    </div>
+    <div class="guide-grid">
+      ${renderGuideCard('Formatos aceitos',IMAGE_GUIDE_GENERAL.formats)}
+      ${renderGuideCard('Dimensões e proporção',IMAGE_GUIDE_GENERAL.specs)}
+      ${renderGuideCard('Imagem principal',IMAGE_GUIDE_GENERAL.main)}
+      ${renderGuideCard('Imagens secundárias',IMAGE_GUIDE_GENERAL.secondary)}
+      ${renderGuideCard(`Principal · ${cat.name}`,img.main)}
+      ${renderGuideCard(`Secundárias · ${cat.name}`,img.secondary)}
+      ${renderGuideCard('Não permitido na imagem principal',IMAGE_GUIDE_GENERAL.forbidden,'danger')}
+      <div class="guide-card full">
+        <h4>Objetivo final</h4>
+        <p>Todas as imagens devem transmitir profissionalismo, clareza, padronização e confiança, garantindo consistência entre Site, App, Marketplace e demais canais digitais da Pague Menos.</p>
+      </div>
+    </div>`;
+}
+
 /* ================================================================
    RENDER DETAIL
    ================================================================ */
 function renderDetail(cat){
-  // Nomenclature section
+  const seoExample=getSeoExample(cat);
   let nomHtml='';
   if(cat.nomenclatures.length===1){
     nomHtml=renderNom(cat.nomenclatures[0]);
@@ -1089,20 +1691,6 @@ function renderDetail(cat){
     nomHtml=`<div class="sub-tabs">${tabs}</div>${panels}`;
   }
 
-  // Preview info cards
-  const pcData=[
-    {ico:'📐',lbl:'Estrutura de Título',val:cat.preview.estrutura,bg:'#E3F2FD'},
-    {ico:'🔑',lbl:'Palavras-chave',val:cat.preview.keywords,bg:'#F3E5F5'},
-    {ico:'🔗',lbl:'Linkagem',val:cat.preview.linkagem,bg:'#E8F5E9'},
-    {ico:'📋',lbl:'Meta Tag',val:cat.preview.metatag,bg:'#FFF8E1'}
-  ];
-  const pcHtml=pcData.map(p=>`
-    <div class="pcard">
-      <div class="pcard-icon" style="background:${p.bg}">${p.ico}</div>
-      <div class="pcard-label">${esc(p.lbl)}</div>
-      <div class="pcard-content">${esc(p.val)}</div>
-    </div>`).join('');
-
   const coverTags=cat.covers.map(c=>`<span class="covers-tag">${esc(c)}</span>`).join('');
 
   return `
@@ -1115,28 +1703,106 @@ function renderDetail(cat){
       <button class="btn-close" onclick="closeDetail()" aria-label="Fechar detalhes">${IC_CLOSE} Fechar</button>
     </div>
 
-    <div class="block">
-      <div class="block-header">
-        <div class="block-bar" style="background:var(--blue)"></div>
-        <h3 style="color:var(--blue)">Estrutura Ideal da Nomenclatura</h3>
+    <div class="detail-tabs-wrap">
+      <div class="detail-tabs" role="tablist" aria-label="Conteúdos da categoria">
+        <button class="detail-tab active-detail-tab" role="tab" aria-selected="true" onclick="switchDetailTab(this,'tab-${cat.id}-nomenclatura')"><span class="detail-tab-ic">Aa</span><span>Nomenclatura</span></button>
+        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-imagens')"><span class="detail-tab-ic">IMG</span><span>Imagens</span></button>
+        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-descritivo')"><span class="detail-tab-ic">SEO</span><span>Descritivo</span></button>
+        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-palavras')"><span class="detail-tab-ic">#</span><span>Palavras-chave</span></button>
+        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-meta')"><span class="detail-tab-ic">MD</span><span>Meta Descrição</span></button>
       </div>
-      ${nomHtml}
-    </div>
 
-    <div class="block">
-      <div class="block-header space-bw">
-        <div style="display:flex;align-items:center;gap:10px">
-          <div class="block-bar" style="background:var(--red)"></div>
-          <h3 style="color:var(--red)">Descritivo SEO da Categoria</h3>
+      <div class="detail-panel active-detail-panel" id="tab-${cat.id}-nomenclatura" role="tabpanel">
+        <div class="tab-intro">
+          <div>
+            <div class="tab-title">Estrutura ideal da nomenclatura</div>
+            <div class="detail-desc">Ordem recomendada dos elementos no título do produto e exemplos da categoria.</div>
+          </div>
         </div>
-        <button class="btn-copy" id="copyBtn" aria-label="Copiar script SEO completo" onclick="copyScript('${cat.scriptKey}')">
-          ${IC_COPY} Copiar Script
-        </button>
+        ${nomHtml}
       </div>
-      <div class="preview-grid">${pcHtml}</div>
-      <div class="covers-row">
-        <div class="covers-label">Script aplicável para</div>
-        <div class="covers-tags">${coverTags}</div>
+
+      <div class="detail-panel" id="tab-${cat.id}-imagens" role="tabpanel">
+        ${renderImageGuide(cat)}
+      </div>
+
+      <div class="detail-panel" id="tab-${cat.id}-descritivo" role="tabpanel">
+        <div class="tab-intro">
+          <div>
+            <div class="tab-title">Descritivo SEO da categoria</div>
+            <div class="detail-desc">Roteiro de conteúdo e cobertura do script aplicado a esta categoria.</div>
+          </div>
+          <div class="tab-copy">
+            <button class="btn-copy" id="copyBtn" aria-label="Copiar script SEO completo" onclick="copyScript('${cat.scriptKey}')">
+              ${IC_COPY} Copiar Script
+            </button>
+          </div>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-card">
+            <h4>Estrutura de título</h4>
+            <p>${esc(cat.preview.estrutura)}</p>
+          </div>
+          <div class="guide-card">
+            <h4>Linkagem</h4>
+            <p>${esc(cat.preview.linkagem)}</p>
+          </div>
+          <div class="guide-card full">
+            <h4>Script aplicável para</h4>
+            <div class="covers-tags">${coverTags}</div>
+          </div>
+          <div class="guide-card full">
+            <h4>Descrição completa renderizada · Produto X</h4>
+            <div class="rendered-example">${seoExample.html}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-panel" id="tab-${cat.id}-palavras" role="tabpanel">
+        <div class="tab-intro">
+          <div>
+            <div class="tab-title">Palavras-chave</div>
+            <div class="detail-desc">Diretriz do script para termos de busca relacionados ao produto, uso, substâncias, benefícios ou categoria.</div>
+          </div>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-card full">
+            <h4>Regra da categoria</h4>
+            <p>${esc(cat.preview.keywords)}</p>
+          </div>
+          <div class="guide-card full">
+            <h4>Exemplo · Produto X</h4>
+            ${renderKeywordPreview(seoExample.keywords)}
+          </div>
+          <div class="guide-card full">
+            <h4>Orientação de uso</h4>
+            <p>Priorize termos que combinem nome do produto, marca, princípio ativo ou funcionalidade, variações comuns de busca e necessidades do cliente. Evite palavras genéricas demais quando não ajudarem a diferenciar o item.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-panel" id="tab-${cat.id}-meta" role="tabpanel">
+        <div class="tab-intro">
+          <div>
+            <div class="tab-title">Meta descrição</div>
+            <div class="detail-desc">Resumo curto para mecanismos de busca, com utilidade do produto e chamada para ação.</div>
+          </div>
+        </div>
+        <div class="guide-grid">
+          <div class="guide-card full">
+            <h4>Regra da categoria</h4>
+            <p>${esc(cat.preview.metatag)}</p>
+          </div>
+          <div class="guide-card full">
+            <h4>Exemplo · Produto X</h4>
+            <div class="meta-preview">${esc(seoExample.meta)}</div>
+            <span class="meta-count">${seoExample.meta.length} caracteres</span>
+          </div>
+          <div class="guide-card full">
+            <h4>Boas práticas</h4>
+            <p>Use até 155 caracteres, cite a principal utilidade do produto, mantenha linguagem direta e inclua um CTA de compra ou consulta quando fizer sentido.</p>
+          </div>
+        </div>
       </div>
     </div>`;
 }
@@ -1191,11 +1857,23 @@ function closeDetail(){
    SWITCH TABS
    ================================================================ */
 function switchTab(btn,panelId){
-  const block=btn.closest('.block');
+  const block=btn.closest('.block')||btn.closest('.detail-panel');
   block.querySelectorAll('.sub-tab').forEach(t=>t.classList.remove('active-tab'));
   block.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active-panel'));
   btn.classList.add('active-tab');
   document.getElementById(panelId)?.classList.add('active-panel');
+}
+
+function switchDetailTab(btn,panelId){
+  const wrap=btn.closest('.detail-tabs-wrap');
+  wrap.querySelectorAll('.detail-tab').forEach(t=>{
+    t.classList.remove('active-detail-tab');
+    t.setAttribute('aria-selected','false');
+  });
+  wrap.querySelectorAll('.detail-panel').forEach(p=>p.classList.remove('active-detail-panel'));
+  btn.classList.add('active-detail-tab');
+  btn.setAttribute('aria-selected','true');
+  document.getElementById(panelId)?.classList.add('active-detail-panel');
 }
 
 /* ================================================================
