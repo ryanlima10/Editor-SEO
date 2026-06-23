@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guia de Nomenclatura e Descritivo SEO · Pague Menos</title>
 <meta name="description" content="Guia visual e interativo de nomenclatura e descritivo SEO dos produtos Pague Menos por categoria.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230000BE'/%3E%3Crect x='16' y='12' width='28' height='36' rx='5' fill='%23fff'/%3E%3Cpath d='M23 23h14M23 31h10M23 39h8' stroke='%230000BE' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='43' cy='43' r='9' fill='none' stroke='%23E63329' stroke-width='5'/%3E%3Cpath d='M49 49l6 6' stroke='%23E63329' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -142,13 +143,20 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
 
 /* ─── DETAIL TABS ─── */
 .detail-tabs-wrap{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-xl);box-shadow:var(--shadow-md);overflow:hidden}
-.detail-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--gray-100);border-bottom:1px solid var(--gray-200)}
-.detail-tab{min-height:72px;padding:12px 10px;border:0;border-right:1px solid var(--gray-200);background:transparent;color:var(--gray-500);cursor:pointer;font-family:var(--font);font-weight:800;font-size:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:all .15s}
-.detail-tab:last-child{border-right:0}
-.detail-tab:hover{background:#fff;color:var(--blue)}
-.detail-tab.active-detail-tab{background:#fff;color:var(--blue);box-shadow:inset 0 -3px 0 var(--red)}
-.detail-tab-ic{width:30px;height:30px;border-radius:8px;background:rgba(0,0,190,.08);display:flex;align-items:center;justify-content:center;font-size:15px}
+.detail-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;background:linear-gradient(180deg,#EEF2F7 0%,#E4EAF2 100%);border-bottom:1px solid var(--gray-200);padding:9px 9px 0}
+.detail-tab{position:relative;z-index:1;min-height:48px;padding:10px 12px 11px;border:1px solid transparent;border-bottom:0;border-radius:14px 14px 0 0;background:#E9EEF6;color:var(--gray-500);cursor:pointer;font-family:var(--font);font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .15s ease,color .15s ease,box-shadow .15s ease,transform .15s ease,border-color .15s ease}
+.detail-tab:last-child{border-right:1px solid transparent}
+.detail-tab:hover{background:#F8FAFC;color:var(--blue);transform:translateY(-1px)}
+.detail-tab.active-detail-tab{z-index:2;background:#fff;color:var(--blue);border-color:var(--gray-200);box-shadow:0 -2px 10px rgba(15,23,42,.08);transform:translateY(1px)}
+.detail-tab.active-detail-tab::after{content:'';position:absolute;left:12px;right:12px;bottom:0;height:3px;border-radius:999px 999px 0 0;background:var(--red)}
+.detail-tab-ic{width:26px;height:26px;border-radius:8px;background:rgba(0,0,190,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue)}
+.detail-tab-ic svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.detail-tab-label{line-height:1.2;white-space:nowrap}
 .detail-tab.active-detail-tab .detail-tab-ic{background:var(--blue);color:#fff}
+@media(max-width:760px){
+  .detail-tabs{grid-template-columns:repeat(2,1fr);padding:8px 8px 0}
+  .detail-tab{justify-content:flex-start;min-height:48px}
+}
 .detail-panel{display:none;padding:28px}
 .detail-panel.active-detail-panel{display:block}
 .tab-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px;flex-wrap:wrap}
@@ -174,7 +182,7 @@ body{font-family:var(--font);background:#EEF1F8;color:var(--gray-900);line-heigh
 .rendered-example a:hover{text-decoration:underline}
 .keyword-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .keyword-tag{background:var(--blue-light);color:var(--blue);border:1px solid #CFE2FF;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}
-.keyword-preview{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:16px 18px}
+.keyword-preview{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-md);padding:16px 18px 16px 38px}
 .keyword-preview li{font-size:14px;color:var(--gray-700);line-height:1.6;margin:4px 0}
 .meta-preview{background:#fff;border:1px solid var(--gray-200);border-left:4px solid var(--red);border-radius:var(--radius-md);padding:16px;font-size:14px;color:var(--gray-700);line-height:1.65}
 .meta-count{display:inline-flex;margin-top:10px;background:var(--gray-100);color:var(--gray-500);border-radius:999px;padding:4px 10px;font-size:11px;font-weight:800}
@@ -1099,6 +1107,11 @@ const IC_COPY = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 const IC_CHECK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
 const IC_CLOSE = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
 const IC_ARR = `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>`;
+const TAB_ICON_NOM = `<svg viewBox="0 0 24 24"><path d="M4 19h16"/><path d="M7 19 12 5l5 14"/><path d="M9 14h6"/></svg>`;
+const TAB_ICON_IMG = `<svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="m8 15 3-3 3 3 2-2 3 3"/><circle cx="9" cy="9" r="1.2"/></svg>`;
+const TAB_ICON_SEO = `<svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5"/><path d="m15 15 5 5"/><path d="M8 10.5h5"/><path d="M10.5 8v5"/></svg>`;
+const TAB_ICON_KEY = `<svg viewBox="0 0 24 24"><path d="M5 9h14"/><path d="M4 15h14"/><path d="m9 4-2 16"/><path d="m17 4-2 16"/></svg>`;
+const TAB_ICON_META = `<svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="3"/><path d="M8.5 9h7"/><path d="M8.5 13h7"/><path d="M8.5 17h4"/></svg>`;
 
 /* ================================================================
    HELPERS
@@ -1843,11 +1856,11 @@ function renderDetail(cat){
 
     <div class="detail-tabs-wrap">
       <div class="detail-tabs" role="tablist" aria-label="Conteúdos da categoria">
-        <button class="detail-tab active-detail-tab" role="tab" aria-selected="true" onclick="switchDetailTab(this,'tab-${cat.id}-nomenclatura')"><span class="detail-tab-ic">Aa</span><span>Nomenclatura</span></button>
-        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-imagens')"><span class="detail-tab-ic">IMG</span><span>Imagens</span></button>
-        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-descritivo')"><span class="detail-tab-ic">SEO</span><span>Descritivo</span></button>
-        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-palavras')"><span class="detail-tab-ic">#</span><span>Palavras-chave</span></button>
-        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-meta')"><span class="detail-tab-ic">MD</span><span>Meta Descrição</span></button>
+        <button class="detail-tab active-detail-tab" role="tab" aria-selected="true" onclick="switchDetailTab(this,'tab-${cat.id}-nomenclatura')"><span class="detail-tab-ic">${TAB_ICON_NOM}</span><span class="detail-tab-label">Nomenclatura</span></button>
+        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-imagens')"><span class="detail-tab-ic">${TAB_ICON_IMG}</span><span class="detail-tab-label">Imagens</span></button>
+        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-descritivo')"><span class="detail-tab-ic">${TAB_ICON_SEO}</span><span class="detail-tab-label">Descritivo</span></button>
+        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-palavras')"><span class="detail-tab-ic">${TAB_ICON_KEY}</span><span class="detail-tab-label">Palavras-chave</span></button>
+        <button class="detail-tab" role="tab" aria-selected="false" onclick="switchDetailTab(this,'tab-${cat.id}-meta')"><span class="detail-tab-ic">${TAB_ICON_META}</span><span class="detail-tab-label">Meta Descrição</span></button>
       </div>
 
       <div class="detail-panel active-detail-panel" id="tab-${cat.id}-nomenclatura" role="tabpanel">
